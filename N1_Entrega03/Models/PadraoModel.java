@@ -1,7 +1,5 @@
-public class PadraoModel {
-    private int Id;
+package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
 
-    public int getId() {
-        return this.Id;
-    }
+public class PadraoModel {
+
 }
