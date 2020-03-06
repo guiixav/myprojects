@@ -2,12 +2,29 @@ package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
 
 public class Funcionario {
     // Variáveis
+    // #region
     private int Id;
     private String Nome;
     private String CPF;
     private double Salario;
+    // #endregion
+
+    // Construtores
+    // #region
+    public Funcionario() {
+
+    }
+
+    public Funcionario(int Id, String Nome, String CPF, double Salario) {
+        this.Id = Id;
+        this.Nome = Nome;
+        this.CPF = CPF;
+        this.Salario = Salario;
+    }
+    // #endregion
 
     // Getters
+    // #region
     public int getId() {
         return this.Id;
     }
@@ -23,8 +40,10 @@ public class Funcionario {
     public String getSalario() {
         return this.Salario;
     }
+    // #endregion
 
     // Setters
+    // #region
     public void setId(int Id) {
         if (Id >= 0) {
             this.Id = Id;
@@ -48,4 +67,5 @@ public class Funcionario {
             this.Salario = Salario;
         }
     }
+    // #endregion
 }
