@@ -18,7 +18,7 @@ public class FuncionarioController {
 
         File file = new File("Arquivos/Gerente.txt");
 
-        String ParsedClass = String.format("%s|%s|%s|%s|%s", String.valueOf(gerente.getId()),
+        String ParsedClass = String.format("\n%s|%s|%s|%s|%s", String.valueOf(gerente.getId()),
                 String.valueOf(gerente.getTipoFucionario()), gerente.getNome(), gerente.getCPF(),gerente.getSalario());
 
         FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);

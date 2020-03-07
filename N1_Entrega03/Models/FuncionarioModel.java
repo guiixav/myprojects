@@ -1,9 +1,8 @@
 package Models;
 
-public class FuncionarioModel {
+public class FuncionarioModel extends EntidadeModel{
     // Variáveis
     // #region
-    private int Id;
     private String Nome;
     private String CPF;
     private double Salario;
@@ -15,8 +14,7 @@ public class FuncionarioModel {
 
     }
 
-    public FuncionarioModel(int Id, String Nome, String CPF, double Salario) {
-        this.Id = Id;
+    public FuncionarioModel(String Nome, String CPF, double Salario) {
         this.Nome = Nome;
         this.CPF = CPF;
         this.Salario = Salario;
@@ -25,10 +23,6 @@ public class FuncionarioModel {
 
     // Getters
     // #region
-    public int getId() {
-        return this.Id;
-    }
-
     public String getNome() {
         return this.Nome;
     }
@@ -44,12 +38,6 @@ public class FuncionarioModel {
 
     // Setters
     // #region
-    public void setId(int Id) {
-        if (Id >= 0) {
-            this.Id = Id;
-        }
-    }
-
     public void setNome(String Nome) {
         if (Nome.length() > 0) {
             this.Nome = Nome;

@@ -1,14 +1,23 @@
 package Models;
 
 public class EntidadeModel {
-    private int id;
+    private int Id;
 
+    public EntidadeModel(){
+
+    }
+
+    public EntidadeModel(int Id){
+        this.Id = Id;
+    }
+
+    //get set
     public int getId() {
-        return id;
+        return Id;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int Id) {
+        if (Id >= 0) {
+            this.Id = Id;
+        }
     }
-
 }
