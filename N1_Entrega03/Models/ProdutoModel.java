@@ -1,4 +1,4 @@
 package Models;
 
-public class ProdutoModel {
+public class ProdutoModel extends EntidadeModel{
 }

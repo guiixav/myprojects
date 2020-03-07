@@ -10,6 +10,5 @@ public class Main {
     private static void serializeGerente() throws IOException {
         FuncionarioController func = new FuncionarioController();
         func.SalvaCliente();
-
     }
 }

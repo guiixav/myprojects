@@ -1,6 +1,6 @@
 package Models;
 
-public class Usuario {
+public class Usuario extends EntidadeModel {
     // Variáveis
     // #region
     private String Username;

@@ -1,4 +1,4 @@
 package Models;
 
-public class PedidoModel {
+public class PedidoModel extends EntidadeModel{
 }

@@ -1,3 +1,5 @@
+import javax.management.Descriptor;
+
 public enum EntidadesDisponiveis {
     USUARIO("usuario"),
     PEDIDO("pedido"),
@@ -11,4 +13,6 @@ public enum EntidadesDisponiveis {
     EntidadesDisponiveis(String descricao) {
         this.descricao = descricao;
     }
+
+    public String getDescricao(){ return descricao; }
 }
