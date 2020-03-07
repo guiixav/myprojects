@@ -1,4 +1,4 @@
-package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
+package Models;
 
 public class GerenteModel extends FuncionarioModel {
     private int TipoFuncionario;
@@ -12,6 +12,7 @@ public class GerenteModel extends FuncionarioModel {
         this.TipoFuncionario = TipoFuncionario;
     }
 
+    //get set
     public int getTipoFucionario() {
         return this.TipoFuncionario;
     }

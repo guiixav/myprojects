@@ -1,6 +1,6 @@
-package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
+package Models;
 
-public class Entidade {
+public class EntidadeModel {
     private int id;
 
     public int getId() {

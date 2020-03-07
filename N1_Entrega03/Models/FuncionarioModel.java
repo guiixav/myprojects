@@ -1,6 +1,6 @@
-package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
+package Models;
 
-public class Funcionario {
+public class FuncionarioModel {
     // Variáveis
     // #region
     private int Id;
@@ -11,11 +11,11 @@ public class Funcionario {
 
     // Construtores
     // #region
-    public Funcionario() {
+    public FuncionarioModel() {
 
     }
 
-    public Funcionario(int Id, String Nome, String CPF, double Salario) {
+    public FuncionarioModel(int Id, String Nome, String CPF, double Salario) {
         this.Id = Id;
         this.Nome = Nome;
         this.CPF = CPF;
@@ -37,7 +37,7 @@ public class Funcionario {
         return this.CPF;
     }
 
-    public String getSalario() {
+    public double getSalario() {
         return this.Salario;
     }
     // #endregion

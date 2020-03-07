@@ -1,4 +1,4 @@
-package com.source.repos.GitGuilherme.myprojects.N1_Entrega03.Models;
+package Models;
 
 public class ClienteModel {
     // Variáveis
