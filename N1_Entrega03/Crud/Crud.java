@@ -1,7 +1,6 @@
 package Crud;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -11,24 +10,27 @@ import java.util.*;
 
 public class Crud extends Metodos{
 
-    public void ArmazenaEmTxt(String Nome, String CPF, double Salario) throws IOException {
-        //Armazenando TXT region
-        String arquivo = "Arquivos/Gerente.txt";
+    //Armazenando TXT
+    public void ArmazenaEmTxt(String Nome, String CPF, double Salario, String arquivo) throws IOException {
         File file = new File(arquivo);
-        String ParsedClass = String.format("\n%s|%s|%s|%s", String.valueOf(ProxId()),
+        String ParsedClass = String.format("\n%s|%s|%s|%s", String.valueOf(ProxId(arquivo)),
                 Nome, CPF, Salario);
 
-        FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        PrintWriter out = new PrintWriter(bw);
-        System.out.println(ParsedClass);
+//        FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);
+//        BufferedWriter bw = new BufferedWriter(fw);
+//        PrintWriter out = new PrintWriter(bw);
+//        System.out.println(ParsedClass);
+
         Files.write(Paths.get(String.valueOf(file)), ParsedClass.getBytes(), StandardOpenOption.APPEND);
-        //Armazenamento em arquivo .txt endregion
     }
 
     //Próximo Id
-    public int ProxId() throws IOException {
-        String arquivo = "Arquivos/Gerente.txt";
+    public int ProxId(String arquivo) throws IOException {
+        return Collections.max(ListaIds(arquivo)) + 1;
+    }
+
+    //Lista todos os Ids
+    public List<Integer> ListaIds(String arquivo) throws IOException {
         List<Integer> myList = new ArrayList<Integer>();
 
         try(BufferedReader br = new BufferedReader(new FileReader(arquivo))){
@@ -38,7 +40,7 @@ public class Crud extends Metodos{
                 myList.add(Integer.parseInt(linha.split("|")[0]));
             }
         }
-        return Collections.max(myList) + 1;
+        return myList;
     }
 
     //Obj Java para JSON
@@ -60,15 +62,20 @@ public class Crud extends Metodos{
     }
 
     //Insert
-    public void Insert(String json){
-        JsonObject objeto = new JsonObject();
-        if(objeto.has(json)){
+    public void Insert(String registro, String arquivo) throws IOException {
+        List<Integer> myList = ListaIds(arquivo);
 
+        if(!myList.contains(Integer.parseInt(registro.split("|")[0]))){
+            Files.write(Paths.get(arquivo), registro.getBytes(), StandardOpenOption.APPEND);
         }
+        else{
+            System.out.println("Registro já existe!");
+        }
+
     }
 
     //Update
-    public void Update(String json, int Id){
+    public void Update(int Id, String arquivo){
 
     }
 
@@ -79,6 +86,10 @@ public class Crud extends Metodos{
 
     //Select
     public void Select(int Id){
+
+    }
+
+    public void EscreveSistemaDeControle(String texto){
 
     }
 }
