@@ -2,13 +2,20 @@ package Models;
 
 public class Usuario extends EntidadeModel {
     // Variáveis
-    // #region
     private String Username;
     private String Password;
-    // #endregion
+
+    //Construtores
+    public Usuario(){
+
+    }
+
+    public Usuario(String Username, String Password){
+        this.Username = Username;
+        this.Password = Password;
+    }
 
     // Getters
-    // #region
     public String getUsername() {
         return this.Username;
     }
@@ -16,10 +23,8 @@ public class Usuario extends EntidadeModel {
     public String getPassword() {
         return this.Password;
     }
-    // #endregion
 
     // Setters
-    // #region
     public void setUsername(String Username) {
         if (Username.length() > 0) {
             this.Username = Username;
@@ -31,5 +36,4 @@ public class Usuario extends EntidadeModel {
             this.Password = Password;
         }
     }
-    // #endregion
 }

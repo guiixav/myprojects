@@ -11,23 +11,18 @@ import java.util.*;
 public class Crud extends Metodos{
 
     //Armazenando TXT
-    public void ArmazenaEmTxt(String Nome, String CPF, double Salario, String arquivo) throws IOException {
-        File file = new File(arquivo);
-        String ParsedClass = String.format("\n%s|%s|%s|%s", String.valueOf(ProxId(arquivo)),
-                Nome, CPF, Salario);
-
-//        FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);
-//        BufferedWriter bw = new BufferedWriter(fw);
-//        PrintWriter out = new PrintWriter(bw);
-//        System.out.println(ParsedClass);
-
-        Files.write(Paths.get(String.valueOf(file)), ParsedClass.getBytes(), StandardOpenOption.APPEND);
-    }
-
-    //Próximo Id
-    public int ProxId(String arquivo) throws IOException {
-        return Collections.max(ListaIds(arquivo)) + 1;
-    }
+//    public void ArmazenaEmTxt(String registro) throws IOException {
+//        File file = new File(arquivo);
+//        String ParsedClass = String.format("\n%s|%s|%s|%s", String.valueOf(ProxId(arquivo)),
+//                Nome, CPF, Salario);
+//
+////        FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);
+////        BufferedWriter bw = new BufferedWriter(fw);
+////        PrintWriter out = new PrintWriter(bw);
+////        System.out.println(ParsedClass);
+//
+//        Files.write(Paths.get(String.valueOf(file)), ParsedClass.getBytes(), StandardOpenOption.APPEND);
+//    }
 
     //Lista todos os Ids
     public List<Integer> ListaIds(String arquivo) throws IOException {
@@ -43,23 +38,30 @@ public class Crud extends Metodos{
         return myList;
     }
 
-    //Obj Java para JSON
-    public String JavaObjToJson(Object object){
-        Gson gson = new Gson();
-        return gson.toJson(object);
+    //Próximo Id
+    public int ProxId(String arquivo) throws IOException {
+        return Collections.max(ListaIds(arquivo)) + 1;
     }
 
-    //Lê arquivo JSON para Java
-    public Object LerArquivo(String arquivo, Object Entidade) throws FileNotFoundException {
-        Scanner sc = new Scanner(new FileReader(arquivo));
-        Gson gson = new Gson();
-        StringBuilder sb = new StringBuilder();
-        while (sc.hasNext()){
-            sb.append(sc.next());
-        }
-        sc.close();
-        return gson.fromJson(sb.toString(), Entidade.getClass());
-    }
+//    //Obj Java para JSON
+//    public String JavaObjToJson(Object object){
+//        Gson gson = new Gson();
+//        return gson.toJson(object);
+//    }
+//
+//    //Lê arquivo JSON para Java
+//    public Object LerArquivo(String arquivo, Object Entidade) throws FileNotFoundException {
+//        Scanner sc = new Scanner(new FileReader(arquivo));
+//        Gson gson = new Gson();
+//        StringBuilder sb = new StringBuilder();
+//        while (sc.hasNext()){
+//            sb.append(sc.next());
+//        }
+//        sc.close();
+//        return gson.fromJson(sb.toString(), Entidade.getClass());
+//    }
+
+
 
     //Insert
     public void Insert(String registro, String arquivo) throws IOException {
@@ -71,12 +73,20 @@ public class Crud extends Metodos{
         else{
             System.out.println("Registro já existe!");
         }
-
     }
 
     //Update
-    public void Update(int Id, String arquivo){
+    public void Update(String registro, String arquivo, String NovoRegistro) throws IOException {
+        List<Integer> myList = ListaIds(arquivo);
 
+        if(myList.contains(Integer.parseInt(registro.split("|")[0]))){
+            File file = new File(arquivo);
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write("Some text here for a reason");
+            bw.flush();
+            bw.close();
+        }
     }
 
     //Delete

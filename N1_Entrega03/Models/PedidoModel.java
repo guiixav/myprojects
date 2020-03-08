@@ -1,6 +1,7 @@
 package Models;
 
 public class PedidoModel extends EntidadeModel{
+
     //Variáveis
     private String Cliente;
     private String Produto;
