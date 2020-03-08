@@ -1,5 +1,7 @@
 package Tela;
 
+import java.io.IOException;
+
 public abstract class MaquinaEstadoConsole {
-    public abstract boolean Executa();
+    public abstract boolean Executa() throws IOException;
 }

@@ -1,5 +1,10 @@
 package Tela;
 
+import Tela.Cadastro.EstadoConsoleCadastraCliente;
+import Tela.Cadastro.EstadoConsoleCadastraFuncionarioVendedor;
+import Tela.Cadastro.EstadoConsoleCadastraPedido;
+import Tela.Cadastro.EstadoConsoleOpcoesCadastro;
+
 public enum EnumEstadoConsole {
 
     BEM_VINDO(new EstadoConsoleBemvindo()),
@@ -8,7 +13,7 @@ public enum EnumEstadoConsole {
 
     MENU_CADASTRO (new EstadoConsoleOpcoesCadastro()),
 
-    CADASTRA_FUNCIONARIO (new EstadoConsoleCadastraFuncionario()),
+    CADASTRA_FUNCIONARIO (new EstadoConsoleCadastraFuncionarioVendedor()),
 
     CADASTRA_CLIENTE (new EstadoConsoleCadastraCliente()),
 

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Do It</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" >
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        <div id="header">
+            <div class="inner">
+               <nav>
+                    <header>
+                        <h1><a id="logo">Do It</a></h1>
+                        <hr />
+                        <p>Serviços para sua casa.</p>
+                    </header>
+                    
+                    <div>
+                        <a  asp-controller="Login" asp-action="Index" class="button circled scrolly">Entre</a>
+                    </div>
+                    
+                </nav>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="scrolly"><a  asp-controller="Sobre" asp-action="Index">Sobre</a></li>
+                    <li class="scrolly"><a  asp-controller="Contato" asp-action="Index">Contato</a></li>
+                    <li><a  asp-controller="CadastroCliente" asp-action="Index">Cadastre-se</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    
+        @RenderBody();
+    
+        <footer id="footer">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-12">
+                            
+                        <section class="contact">
+                            <header>
+                                <h3>Encontre - nos nas redes sociais</h3>
+                            </header>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+                                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+                            </ul>
+                        </section>
+
+                        <div class="copyright">
+                            <ul class="menu">
+                                <li>&copy; Todos os direitos reservados.</li>
+                                <li>Feito por: <a>Do It</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/jquery.dropotron.min.js"></script>
+        <script src="~/js/jquery.scrolly.min.js"></script>
+        <script src="~/js/jquery.scrollex.min.js"></script>
+        <script src="~/js/browser.min.js"></script>
+        <script src="~/js/breakpoints.min.js"></script>
+        <script src="~/js/util.js"></script>
+        <script src="~/js/main.js"></script>
+
+</body>
+</html>
