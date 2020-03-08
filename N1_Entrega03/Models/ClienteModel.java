@@ -2,13 +2,10 @@ package Models;
 
 public class ClienteModel {
     // Variáveis
-    // #region
     private String Nome;
     private String CPF;
-    // #endregion
 
     // Construtores
-    // #region
     public ClienteModel() {
 
     }
@@ -17,10 +14,8 @@ public class ClienteModel {
         this.Nome = Nome;
         this.CPF = CPF;
     }
-    // #endregion
 
     // Getters
-    // #region
     public String getNome() {
         return this.Nome;
     }
@@ -28,10 +23,8 @@ public class ClienteModel {
     public String getCPF() {
         return this.CPF;
     }
-    // #endregion
 
     // Setters
-    // #region
     public void setNome(String Nome) {
         if (Nome.length() > 0) {
             this.Nome = Nome;
@@ -43,5 +36,4 @@ public class ClienteModel {
             this.CPF = CPF;
         }
     }
-    // #endregion
 }

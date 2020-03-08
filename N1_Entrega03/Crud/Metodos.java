@@ -1,9 +1,6 @@
 package Crud;
 
 public class Metodos {
-
-
-
     public boolean ValidaUsername(String usuario){
         if(usuario.equals("admin")){
             System.out.println("Usuario admin");
@@ -13,7 +10,6 @@ public class Metodos {
             return false;
     }
 
-
     public boolean ValidaPassword( String senha){
         if(senha.equals("admin")){
             System.out.println("Senha admin");
@@ -21,6 +17,5 @@ public class Metodos {
         }
         else
             return false;
-    }
     }
 }
