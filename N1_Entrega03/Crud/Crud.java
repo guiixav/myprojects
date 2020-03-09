@@ -10,20 +10,6 @@ import java.util.*;
 
 public class Crud extends Metodos{
 
-    //Armazenando TXT
-//    public void ArmazenaEmTxt(String registro) throws IOException {
-//        File file = new File(arquivo);
-//        String ParsedClass = String.format("\n%s|%s|%s|%s", String.valueOf(ProxId(arquivo)),
-//                Nome, CPF, Salario);
-//
-////        FileWriter fw = new FileWriter("Arquivos/Gerente.txt", true);
-////        BufferedWriter bw = new BufferedWriter(fw);
-////        PrintWriter out = new PrintWriter(bw);
-////        System.out.println(ParsedClass);
-//
-//        Files.write(Paths.get(String.valueOf(file)), ParsedClass.getBytes(), StandardOpenOption.APPEND);
-//    }
-
     //Lista todos os Ids
     public List<Integer> ListaIds(String arquivo) throws IOException {
         List<Integer> myList = new ArrayList<Integer>();
@@ -42,26 +28,6 @@ public class Crud extends Metodos{
     public int ProxId(String arquivo) throws IOException {
         return Collections.max(ListaIds(arquivo)) + 1;
     }
-
-//    //Obj Java para JSON
-//    public String JavaObjToJson(Object object){
-//        Gson gson = new Gson();
-//        return gson.toJson(object);
-//    }
-//
-//    //Lê arquivo JSON para Java
-//    public Object LerArquivo(String arquivo, Object Entidade) throws FileNotFoundException {
-//        Scanner sc = new Scanner(new FileReader(arquivo));
-//        Gson gson = new Gson();
-//        StringBuilder sb = new StringBuilder();
-//        while (sc.hasNext()){
-//            sb.append(sc.next());
-//        }
-//        sc.close();
-//        return gson.fromJson(sb.toString(), Entidade.getClass());
-//    }
-
-
 
     //Insert
     public void Insert(String registro, String arquivo) throws IOException {
