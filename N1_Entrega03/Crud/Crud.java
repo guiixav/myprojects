@@ -1,7 +1,5 @@
 package Crud;
 
-import com.google.gson.Gson;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
