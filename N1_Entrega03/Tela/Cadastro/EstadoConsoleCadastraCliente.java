@@ -1,12 +1,11 @@
 package Tela.Cadastro;
 
-import Models.ClienteModel;
-
-import java.io.IOException;
-import java.util.Scanner;
 import Crud.Crud;
 import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
+
+import java.io.IOException;
+import java.util.Scanner;
 
 public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
     @Override
@@ -16,7 +15,7 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         //FuncionarioModel funcionario = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
         System.out.println("**** CADASTRO DE CLIENTE ****");
-        String Registro = String.valueOf(crud.ProxId("Cliente.txt"));
+        String Registro = String.valueOf(crud.ProxId("Clientes.txt"));
         System.out.println("Escolha a opção desejada:");
         System.out.println("1 - Cadastrar novo cliente");
         System.out.println("2 - Atualizar os dados de um cliente");
@@ -41,7 +40,7 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         //funcionario.setCPF(scan.nextLine());
         //funcionario.setSalario(Double.parseDouble( scan.nextLine() ));
 
-        crud.Insert(Registro, "Cliente.txt");
+        crud.Insert(Registro, "Clientes.txt");
 
         return false;
     }

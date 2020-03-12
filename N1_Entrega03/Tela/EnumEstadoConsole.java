@@ -14,8 +14,6 @@ import Tela.Cadastro.Pedido.Atualiza.EstadoConsoleAtualizaPedido;
 import Tela.Cadastro.Pedido.Deleta.EstadoConsoleDeletaPedido;
 import Tela.Cadastro.Pedido.Registra.EstadoConsoleRegistraPedido;
 
-
-
 public enum EnumEstadoConsole {
 
     BEM_VINDO(new EstadoConsoleBemvindo()),

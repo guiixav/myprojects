@@ -18,7 +18,7 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         int precoCelBom = 500;
         int ValorTotal;
         String produto = "";
-        String Registro = String.valueOf(crud.ProxId("Pedido.txt"));
+        String Registro = String.valueOf(crud.ProxId("Pedidos.txt"));
         System.out.println("------REGISTRO DE NOVOS PEDIDOS-------");
         System.out.println("Digite o nome do Cliente solicitante:");
         Registro += "|" + scan.nextLine();
@@ -49,7 +49,7 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         ValorTotal = precoCelBom + precoIphone;
 
         Registro += "|" + produto + "|" + ValorTotal;
-        crud.Insert(Registro, "Pedido.txt");
+        crud.Insert(Registro, "Pedidos.txt");
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");

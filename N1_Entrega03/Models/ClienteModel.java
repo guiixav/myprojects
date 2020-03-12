@@ -1,6 +1,6 @@
 package Models;
 
-public class ClienteModel {
+public class ClienteModel extends EntidadeModel{
     // Variáveis
     private String Nome;
     private String CPF;
