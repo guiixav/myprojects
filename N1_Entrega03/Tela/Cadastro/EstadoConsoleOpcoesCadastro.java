@@ -24,13 +24,13 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
         switch(opcao)
         {
             case 1:
-                EnumEstadoConsole.CADASTRA_FUNCIONARIO.getEstadoMaquina();
+                EnumEstadoConsole.CADASTRO_FUNCIONARIO.getEstadoMaquina();
                 break;
             case 2:
-                EnumEstadoConsole.CADASTRA_CLIENTE.getEstadoMaquina();
+                EnumEstadoConsole.CADASTRO_CLIENTE.getEstadoMaquina();
                 break;
             case 3:
-                EnumEstadoConsole.CADASTRA_PEDIDO.getEstadoMaquina();
+                EnumEstadoConsole.CADASTRO_PEDIDO.getEstadoMaquina();
                 break;
             case 0:
                 EnumEstadoConsole.BEM_VINDO.getEstadoMaquina();
