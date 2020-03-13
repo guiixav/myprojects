@@ -26,7 +26,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
     protected void SetTabela() { Tabela = "Produtos.txt"; }
 
     @Override
-    protected ProdutoModel MontaModel(String registro){
+    public ProdutoModel MontaModel(String registro){
         ProdutoModel produto = new ProdutoModel();
         List<String> registros = Arrays.asList(registro.split("|"));
 

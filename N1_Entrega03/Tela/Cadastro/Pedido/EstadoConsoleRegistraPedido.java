@@ -1,29 +1,56 @@
 package Tela.Cadastro.Pedido;
 
 import Crud.Crud;
+import DAO.PedidoDAO;
+import Models.PedidoModel;
 import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
-
 import java.io.IOException;
 import java.util.Scanner;
-
+import Models.ProdutoModel;
+import Models.ClienteModel;
 public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
     @Override
     public boolean Executa() throws IOException {
         Crud crud = new Crud();
         Scanner scan = new Scanner(System.in);
+        ClienteModel cliete = new ClienteModel();
+        PedidoModel pedido = new PedidoModel();
+        PedidoDAO pedidoDAO = new PedidoDAO();
+
+        String produto = "";
+        String Registro = String.valueOf(crud.ProxId("Pedidos.txt"));
+        System.out.println("------REGISTRO DE NOVOS PEDIDOS-------");
+        System.out.println("Digite o ID do Cliente solicitante:");
+        pedido.setClienteId(scan.nextLine());
+
+
+        System.out.println("Digite o nome do produto:");
+        //scan.nextLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         int qtdIphone;
         int qtdCelBom;
         int precoIphone = 1000;
         int precoCelBom = 500;
         int ValorTotal;
-        String produto = "";
-        String Registro = String.valueOf(crud.ProxId("Pedidos.txt"));
-        System.out.println("------REGISTRO DE NOVOS PEDIDOS-------");
-        System.out.println("Digite o ID do Cliente solicitante:");
-        // scan.nextLine();
 
-        System.out.println("Escolha os produtos abaixo:");
         int opcao1 = scan.nextInt();
         do{
             System.out.println("1 - Iphone");

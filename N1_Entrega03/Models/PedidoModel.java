@@ -4,7 +4,7 @@ public class PedidoModel extends EntidadeModel{
 
     //Variáveis
     private String ClienteId;
-    private String Produto;
+    private String ProdutoId;
     private double ValorTotal;
 
     //Construtores
