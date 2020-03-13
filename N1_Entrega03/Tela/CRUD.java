@@ -9,7 +9,7 @@ public class CRUD {
          * @param args the command line arguments
          */
         public static void main(String[] args) throws IOException {
-            estadoConsole = EnumEstadoConsole.CADASTRA_CLIENTE.getEstadoMaquina();;
+            estadoConsole = EnumEstadoConsole.CADASTRO_CLIENTE.getEstadoMaquina();;
             Boolean saida = false;
             while (!saida){
                 saida = estadoConsole.Executa();

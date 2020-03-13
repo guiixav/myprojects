@@ -11,6 +11,5 @@ public abstract class PadraoDAO<T> extends Crud {
 
     protected abstract void SetTabela();
     protected PadraoDAO(){ SetTabela(); }
-    protected abstract T MontaModel(String registro);
     protected abstract Map<String, String> CriaParametros(T model);
 }

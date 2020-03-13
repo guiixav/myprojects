@@ -1,10 +1,14 @@
 package Models;
 
+import Crud.Crud;
+
+import java.io.IOException;
+
 public class PedidoModel extends EntidadeModel{
 
     //Variáveis
     private String ClienteId;
-    private String Produto;
+    private String ProdutoId;
     private double ValorTotal;
 
     //Construtores
@@ -12,27 +16,30 @@ public class PedidoModel extends EntidadeModel{
 
     }
 
-    public PedidoModel(String ClienteId, String Produto, double ValorTotal) {
+    public PedidoModel(String ClienteId, String ProdutoId, double ValorTotal) {
         this.ClienteId = ClienteId;
-        this.Produto = Produto;
+        this.ProdutoId = ProdutoId;
         this.ValorTotal = ValorTotal;
     }
 
     //Getters
     public String getClienteId() { return this.ClienteId; }
-    public String getProduto() { return this.Produto; }
+    public String getProdutoId() { return this.ProdutoId; }
     public double getValorTotal() { return this.ValorTotal; }
 
     //Setters
-    public void setClienteId(String Cliente) {
-        if (Cliente.length() > 0) {
-            this.ClienteId = Cliente;
+    public void setClienteId(String ClienteId) throws IOException {
+        Crud crud = new Crud();
+
+        if (ClienteId.length() > 0 && crud.ListaIds("Clientes.txt").contains(ClienteId)) {
+            this.ClienteId = ClienteId;
         }
     }
 
-    public void setProduto(String Produto) {
-        if (Produto.length() > 0) {
-            this.Produto = Produto;
+    public void setProdutoId(String ProdutoId) throws IOException {
+        Crud crud = new Crud();
+        if (ProdutoId.length() > 0 && crud.ListaIds("Produtos.txt").contains(ProdutoId)) {
+            this.ProdutoId = ProdutoId;
         }
     }
 
