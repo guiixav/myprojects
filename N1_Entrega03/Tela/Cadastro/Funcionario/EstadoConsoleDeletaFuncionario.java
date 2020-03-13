@@ -1,4 +1,4 @@
-package Tela.Cadastro.Funcionario.Deleta;
+package Tela.Cadastro.Funcionario;
 
 import Tela.MaquinaEstadoConsole;
 

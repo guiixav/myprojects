@@ -1,4 +1,5 @@
-package Tela.Cadastro.Cliente.Registra;
+package Tela.Cadastro.Cliente;
+import Models.ClienteModel;
 import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
 import java.util.Scanner;
@@ -9,15 +10,17 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
     @Override
     public boolean Executa() throws IOException {
         Crud crud = new Crud();
+        ClienteModel cliente = new ClienteModel();
         Scanner scan = new Scanner(System.in);
         String Registro = String.valueOf(crud.ProxId("Cliente.txt"));
         System.out.println("------REGISTRO DE NOVOS CLIENTES-------");
         System.out.println("Digite o nome do Cliente:");
-        Registro += "|" + scan.nextLine();
-        //funcionario.setNome(scan.nextLine());
+        //Registro += "|" + scan.nextLine();
+        cliente.setNome(scan.nextLine());
         System.out.println("Digite o CPF do Cliente:");
-        Registro += "|" + scan.nextLine();
-        crud.Insert(Registro, "Cliente.txt");
+        cliente.setCPF(scan.nextLine());
+        //Registro += "|" + scan.nextLine();
+        //crud.Insert(Registro, "Cliente.txt");
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");

@@ -1,4 +1,4 @@
-package Tela.Cadastro.Funcionario.Registra;
+package Tela.Cadastro.Funcionario;
 
 import Crud.Crud;
 import Tela.EnumEstadoConsole;

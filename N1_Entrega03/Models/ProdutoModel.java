@@ -1,20 +1,27 @@
 package Models;
 
 public class ProdutoModel extends EntidadeModel{
+    private String Nome;
     private String Descricao;
     private double Preco;
-    private int QntEstoque;
-    private int QntVendidos;
+
 
     public ProdutoModel(){
 
     }
 
-    public ProdutoModel(String Descricao, double Preco, int QntEstoque, int QntVendidos){
-        this.Descricao = Descricao;
+    public ProdutoModel(String Nome, String Descricao, double Preco){
+        this.Nome = Nome;
         this.Preco = Preco;
-        this.QntEstoque = QntEstoque;
-        this.QntVendidos = QntVendidos;
+        this.Descricao = Descricao;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String descricao) {
+        Nome = Nome;
     }
 
     public String getDescricao() {
@@ -33,19 +40,4 @@ public class ProdutoModel extends EntidadeModel{
         Preco = preco;
     }
 
-    public int getQntEstoque() {
-        return QntEstoque;
-    }
-
-    public void setQntEstoque(int qntEstoque) {
-        QntEstoque = qntEstoque;
-    }
-
-    public int getQntVendidos() {
-        return QntVendidos;
-    }
-
-    public void setQntVendidos(int qntVendidos) {
-        QntVendidos = qntVendidos;
-    }
 }

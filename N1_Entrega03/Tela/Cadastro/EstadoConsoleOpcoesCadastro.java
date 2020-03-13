@@ -18,6 +18,7 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
         System.out.println("1 - Cadastro de funcionário");
         System.out.println("2 - Cadastro de Cliente");
         System.out.println("3 - Cadastro de pedidos");
+        System.out.println("4 - Cadastro de produto");
         System.out.println("0 - Sair");
         Scanner scan = new Scanner(System.in);
         int opcao = scan.nextInt();
@@ -31,6 +32,9 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
                 break;
             case 3:
                 EnumEstadoConsole.CADASTRO_PEDIDO.getEstadoMaquina();
+                break;
+            case 4:
+                EnumEstadoConsole.CADASTRO_PRODUTO.getEstadoMaquina();
                 break;
             case 0:
                 EnumEstadoConsole.BEM_VINDO.getEstadoMaquina();

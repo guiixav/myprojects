@@ -1,10 +1,10 @@
-package Tela.Cadastro.Funcionario.Atualiza;
+package Tela.Cadastro.Cliente;
 
 import Tela.MaquinaEstadoConsole;
 
 import java.io.IOException;
 
-public class EstadoConsoleAtualizaFuncionario extends MaquinaEstadoConsole {
+public class EstadoConsoleDeletaCliente extends MaquinaEstadoConsole {
     @Override
     public boolean Executa() throws IOException {
         return false;

@@ -1,4 +1,4 @@
-package Tela.Cadastro.Pedido.Registra;
+package Tela.Cadastro.Pedido;
 
 import Crud.Crud;
 import Tela.EnumEstadoConsole;
@@ -20,9 +20,9 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         String produto = "";
         String Registro = String.valueOf(crud.ProxId("Pedido.txt"));
         System.out.println("------REGISTRO DE NOVOS PEDIDOS-------");
-        System.out.println("Digite o nome do Cliente solicitante:");
-        Registro += "|" + scan.nextLine();
-        //funcionario.setNome(scan.nextLine());
+        System.out.println("Digite o ID do Cliente solicitante:");
+        // scan.nextLine();
+
         System.out.println("Escolha os produtos abaixo:");
         int opcao1 = scan.nextInt();
         do{

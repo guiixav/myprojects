@@ -1,10 +1,11 @@
-package Tela.Cadastro.Pedido.Deleta;
+package Tela.Cadastro;
 
 import Tela.MaquinaEstadoConsole;
 
 import java.io.IOException;
 
-public class EstadoConsoleDeletaPedido extends MaquinaEstadoConsole {
+public class EstadoConsoleCadastraProduto extends MaquinaEstadoConsole {
+
     @Override
     public boolean Executa() throws IOException {
         return false;
