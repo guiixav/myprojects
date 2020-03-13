@@ -7,6 +7,7 @@ import java.io.IOException;
 public class PedidoModel extends EntidadeModel{
 
     //Variáveis
+    private String Id;
     private String ClienteId;
     private String ProdutoId;
     private double ValorTotal;

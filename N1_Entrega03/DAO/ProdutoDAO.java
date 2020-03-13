@@ -12,7 +12,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
     protected Map<String, String> CriaParametros(ProdutoModel produto) {
         Map<String, String> map = new HashMap<String, String>();
 
-        map.put("Id", String.valueOf(produto.getId()));
+        map.put("Idd", String.valueOf(produto.getIdd()));
         map.put("Descricao", produto.getDescricao());
         map.put("Preco", String.valueOf(produto.getPreco()));
 
@@ -25,13 +25,31 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro += String.valueOf(produto.getId());
+        Registro += String.valueOf(produto.getIdd());
         Registro += "|" + produto.getDescricao();
         Registro += "|" + produto.getPreco();
 
         crud.Insert(Registro, "Produtos.txt");
 
     }
+    public boolean MontaStringUpdate(ProdutoModel prod, String Id) throws IOException {
+
+
+        ProdutoModel produto = new ProdutoModel();
+        Crud crud = new Crud();
+        String Registro = "";
+        Registro += String.valueOf(produto.getIdd());
+        Registro += "|" + produto.getDescricao();
+        Registro += "|" + produto.getPreco();
+
+        if(
+        crud.Update(Id,"Produtos.txt",Registro))
+        {
+          return true;
+        }
+        else return false;
+    }
+
 
 
     @Override

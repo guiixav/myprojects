@@ -19,8 +19,8 @@ public class EstadoConsoleRegistraProduto extends MaquinaEstadoConsole {
 
 
         System.out.println("------REGISTRO DE NOVOS PRODUTOS-------");
-        System.out.println("Digite o nome do Novo Produto:");
-        produto.setNome(scan.nextLine());
+        System.out.println("Digite o Id do Produto:");
+        produto.setIdd(scan.nextLine());
         System.out.println("Digite a descrição do produto:");
         produto.setDescricao(scan.nextLine());
         System.out.println("Digite o preço do produto:");

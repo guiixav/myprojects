@@ -10,8 +10,6 @@ import Tela.Cadastro.EstadoConsoleOpcoesCadastro;
 import Tela.Cadastro.Funcionario.EstadoConsoleAtualizaFuncionario;
 import Tela.Cadastro.Funcionario.EstadoConsoleDeletaFuncionario;
 import Tela.Cadastro.Funcionario.EstadoConsoleRegistraFuncionario;
-import Tela.Cadastro.Pedido.EstadoConsoleAtualizaPedido;
-import Tela.Cadastro.Pedido.EstadoConsoleDeletaPedido;
 import Tela.Cadastro.Pedido.EstadoConsoleRegistraPedido;
 import Tela.Cadastro.Produto.EstadoConsoleAtualizaProduto;
 import Tela.Cadastro.Produto.EstadoConsoleDeletaProduto;
@@ -46,15 +44,11 @@ public enum EnumEstadoConsole {
 
     DELETA_CLIENTE (new EstadoConsoleDeletaCliente()),
 
-    DELETA_PEDIDO (new EstadoConsoleDeletaPedido()),
-
     DELETA_PRODUTO (new EstadoConsoleDeletaProduto()),
 
     ATUALIZA_FUNCIONARIO (new EstadoConsoleAtualizaFuncionario()),
 
     ATUALIZA_CLIENTE (new EstadoConsoleAtualizaCliente()),
-
-    ATUALIZA_PEDIDO (new EstadoConsoleAtualizaPedido()),
 
     ATUALIZA_PRODUTO (new EstadoConsoleAtualizaProduto());
 

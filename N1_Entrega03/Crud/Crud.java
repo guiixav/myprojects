@@ -91,6 +91,27 @@ public class Crud extends Metodos{
         return registro;
     }
 
+    public boolean VirificaTxt(int Id, String arquivo) throws IOException {
+        List<String> linhas = new ArrayList<String>();
+        try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                linhas.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        List<Integer> ListadeIds = ListaIds(arquivo);
+        if(ListadeIds.contains(Id)){
+            return true;
+
+        }
+        else
+            return false;
+    }
+
     public void EscreveSistemaDeControle(String texto){
 
     }
