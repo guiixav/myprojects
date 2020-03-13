@@ -28,19 +28,22 @@ public class Crud extends Metodos{
     }
 
     //Insert
-    public void Insert(String registro, String arquivo) throws IOException {
+    public Boolean Insert(String registro, String arquivo) throws IOException {
         List<Integer> myList = ListaIds(arquivo);
+        registro += "\n";
 
         if(!myList.contains(Integer.parseInt(registro.split("|")[0]))){
             Files.write(Paths.get(arquivo), registro.getBytes(), StandardOpenOption.APPEND);
+            return true;
         }
         else{
             System.out.println("Registro/Id já existe!");
+            return false;
         }
     }
 
     //Update
-    public void Update(String registro, String arquivo, String NovoRegistro) throws IOException {
+    public Boolean Update(String registro, String arquivo, String NovoRegistro) throws IOException {
         List<Integer> myList = ListaIds(arquivo);
 
         if(myList.contains(Integer.parseInt(registro.split("|")[0]))){
@@ -50,11 +53,13 @@ public class Crud extends Metodos{
             bw.write(NovoRegistro);
             bw.flush();
             bw.close();
+            return true;
         }
+        return false;
     }
 
     //Delete
-    public void Delete(int Id, String arquivo) throws IOException {
+    public Boolean Delete(int Id, String arquivo) throws IOException {
         List<String> linhas = new ArrayList<String>();
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
             String line;
@@ -63,6 +68,7 @@ public class Crud extends Metodos{
             }
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
 
         List<Integer> ListadeIds = ListaIds(arquivo);
@@ -75,11 +81,14 @@ public class Crud extends Metodos{
             fw.write(str + System.lineSeparator());
         }
         fw.close();
+        return true;
     }
 
     //Select
-    public void Select(int Id, String arquivo){
+    public String Select(int Id, String arquivo){
+        String registro = "";
 
+        return registro;
     }
 
     public void EscreveSistemaDeControle(String texto){

@@ -18,18 +18,6 @@ public class GerenteDAO extends PadraoDAO<GerenteModel>{
     }
 
     @Override
-    protected GerenteModel MontaModel(String registro){
-        GerenteModel gerente = new GerenteModel();
-        List<String> registros = Arrays.asList(registro.split("|"));
-        gerente.setId(Integer.parseInt(registros.get(0)));
-        gerente.setNome(registros.get(1));
-        gerente.setCPF(registros.get(2));
-        gerente.setSalario(Double.parseDouble(registros.get(3)));
-
-        return gerente;
-    }
-
-    @Override
     protected void SetTabela(){
         Arquivo = "Gerentes.txt";
     }
