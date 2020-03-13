@@ -1,7 +1,9 @@
 package DAO;
 
+import Crud.Crud;
 import Models.FuncionarioModel;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,5 +26,19 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
     @Override
     protected void SetTabela() {
         Tabela = "Funcionarios.txt";
+    }
+
+
+    public void MontaString(FuncionarioModel funcionario) throws IOException {
+
+        FuncionarioModel func = new FuncionarioModel();
+        Crud crud = new Crud();
+        String Registro = "";
+        Registro += "|" + func.getNome();
+        Registro += "|" + func.getCPF();
+        Registro += "|" + func.getSalario();
+
+        crud.Insert(Registro, "Funcionarios.txt");
+
     }
 }

@@ -1,7 +1,7 @@
 package Models;
 
 public class ProdutoModel extends EntidadeModel{
-    private String Nome;
+    private String Id;
     private String Descricao;
     private double Preco;
 
@@ -10,18 +10,18 @@ public class ProdutoModel extends EntidadeModel{
 
     }
 
-    public ProdutoModel(String Nome, String Descricao, double Preco){
-        this.Nome = Nome;
+    public ProdutoModel(String Id, String Descricao, double Preco){
+        this.Id = Id;
         this.Preco = Preco;
         this.Descricao = Descricao;
     }
 
     public String getNome() {
-        return Nome;
+        return Id;
     }
 
     public void setNome(String descricao) {
-        Nome = Nome;
+        Id = Id;
     }
 
     public String getDescricao() {

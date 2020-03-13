@@ -1,7 +1,12 @@
 package Models;
 
-public class FuncionarioModel extends EntidadeModel{
+import Crud.Crud;
+
+import java.io.IOException;
+
+public class FuncionarioModel extends EntidadeModel {
     // Variáveis
+
     private String Nome;
     private String CPF;
     private double Salario;
@@ -11,13 +16,16 @@ public class FuncionarioModel extends EntidadeModel{
 
     }
 
-    public FuncionarioModel(String Nome, String CPF, double Salario) {
+    public FuncionarioModel(String Id, String Nome, String CPF, double Salario) {
         this.Nome = Nome;
         this.CPF = CPF;
         this.Salario = Salario;
+
     }
 
     // Getters
+
+
     public String getNome() {
         return this.Nome;
     }
@@ -48,4 +56,6 @@ public class FuncionarioModel extends EntidadeModel{
             this.Salario = Salario;
         }
     }
+
+
 }

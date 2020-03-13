@@ -32,15 +32,12 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
 
 
         System.out.println("Digite o nome do Funcionario:");
-        //Registro += "|" + scan.nextLine();
         funcionario.setNome(scan.nextLine());
         System.out.println("Digite o CPF do Funcionario:");
         funcionario.setCPF(scan.nextLine());
-        //Registro += "|" + scan.nextLine();
         System.out.println("Digite o salario do Funcionario:");
         funcionario.setSalario(Double.parseDouble(scan.nextLine()));
-        //Registro += "|" + scan.nextLine();
-        crud.Insert(funcionario.toString(), Tipo);
+
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
