@@ -3,7 +3,7 @@ package Models;
 public class PedidoModel extends EntidadeModel{
 
     //Variáveis
-    private String Cliente;
+    private String ClienteId;
     private String Produto;
     private double ValorTotal;
 
@@ -12,21 +12,21 @@ public class PedidoModel extends EntidadeModel{
 
     }
 
-    public PedidoModel(String Cliente, String Produto, double ValorTotal) {
-        this.Cliente = Cliente;
+    public PedidoModel(String ClienteId, String Produto, double ValorTotal) {
+        this.ClienteId = ClienteId;
         this.Produto = Produto;
         this.ValorTotal = ValorTotal;
     }
 
     //Getters
-    public String getCliente() { return this.Cliente; }
+    public String getClienteId() { return this.ClienteId; }
     public String getProduto() { return this.Produto; }
     public double getValorTotal() { return this.ValorTotal; }
 
     //Setters
-    public void setCliente(String Cliente) {
+    public void setClienteId(String Cliente) {
         if (Cliente.length() > 0) {
-            this.Cliente = Cliente;
+            this.ClienteId = Cliente;
         }
     }
 

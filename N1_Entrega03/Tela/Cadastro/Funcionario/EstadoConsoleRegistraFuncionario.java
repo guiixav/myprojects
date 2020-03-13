@@ -20,11 +20,11 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         String Tipo = "";
         do {
             if (scan.nextLine() == "1") {
-                Registro = String.valueOf(crud.ProxId("Gerente.txt"));
-                Tipo = "Gerente.txt";
+                Registro = String.valueOf(crud.ProxId("Gerentes.txt"));
+                Tipo = "Gerentes.txt";
             } else if (scan.nextLine() == "2") {
-                Registro = String.valueOf(crud.ProxId("Funcionario.txt"));
-                Tipo = "Funcionario.txt";
+                Registro = String.valueOf(crud.ProxId("Funcionarios.txt"));
+                Tipo = "Funcionarios.txt";
             }
         } while (scan.nextLine() != "1" || scan.nextLine() != "2");
 

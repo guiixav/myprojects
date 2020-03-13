@@ -3,9 +3,6 @@ package Controllers;
 import Crud.Metodos;
 import Models.GerenteModel;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class FuncionarioController extends Metodos {
     public void SalvaCliente() throws IOException {

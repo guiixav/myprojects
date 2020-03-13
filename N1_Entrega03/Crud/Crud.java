@@ -35,7 +35,7 @@ public class Crud extends Metodos{
             Files.write(Paths.get(arquivo), registro.getBytes(), StandardOpenOption.APPEND);
         }
         else{
-            System.out.println("Registro já existe!");
+            System.out.println("Registro/Id já existe!");
         }
     }
 
@@ -47,19 +47,38 @@ public class Crud extends Metodos{
             File file = new File(arquivo);
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
-            bw.write("Some text here for a reason");
+            bw.write(NovoRegistro);
             bw.flush();
             bw.close();
         }
     }
 
     //Delete
-    public void Delete(int Id){
+    public void Delete(int Id, String arquivo) throws IOException {
+        List<String> linhas = new ArrayList<String>();
+        try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                linhas.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        List<Integer> ListadeIds = ListaIds(arquivo);
+        if(ListadeIds.contains(Id)){
+            linhas.remove(ListadeIds.indexOf(Id));
+        }
+
+        FileWriter fw = new FileWriter(arquivo);
+        for(String str: linhas){
+            fw.write(str + System.lineSeparator());
+        }
+        fw.close();
     }
 
     //Select
-    public void Select(int Id){
+    public void Select(int Id, String arquivo){
 
     }
 

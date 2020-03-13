@@ -4,7 +4,8 @@ import Models.GerenteModel;
 
 import java.util.*;
 
-public class GerenteDAO {
+public class GerenteDAO extends PadraoDAO<GerenteModel>{
+    @Override
     protected Map<String, String> CriaParametros(GerenteModel gerente) {
         Map<String, String> map = new HashMap<String, String>();
 
@@ -16,6 +17,7 @@ public class GerenteDAO {
         return map;
     }
 
+    @Override
     protected GerenteModel MontaModel(String registro){
         GerenteModel gerente = new GerenteModel();
         List<String> registros = Arrays.asList(registro.split("|"));
@@ -25,5 +27,10 @@ public class GerenteDAO {
         gerente.setSalario(Double.parseDouble(registros.get(3)));
 
         return gerente;
+    }
+
+    @Override
+    protected void SetTabela(){
+        Arquivo = "Gerentes.txt";
     }
 }

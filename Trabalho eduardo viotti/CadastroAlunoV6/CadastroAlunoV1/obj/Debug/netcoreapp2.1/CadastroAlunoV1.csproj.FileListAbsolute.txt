@@ -330,3 +330,45 @@ C:\Users\guilherme.q.xavier\OneDrive - Accenture\Documentos\Docs\Trabalho eduard
 C:\Users\guilherme.q.xavier\OneDrive - Accenture\Documentos\Docs\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\CadastroCliente\Index.g.cshtml.cs
 C:\Users\guilherme.q.xavier\OneDrive - Accenture\Documentos\Docs\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\CadastroPrestador\Index.g.cshtml.cs
 C:\Users\guilherme.q.xavier\OneDrive - Accenture\Documentos\Docs\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.deps.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.runtimeconfig.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.runtimeconfig.dev.json
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.dll
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.pdb
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.Views.dll
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\bin\Debug\netcoreapp2.1\CadastroAlunoV1.Views.pdb
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.csprojAssemblyReference.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.RazorAssemblyInfo.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.RazorAssemblyInfo.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.AssemblyInfoInputs.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.AssemblyInfo.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.TagHelpers.input.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.TagHelpers.output.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.RazorCoreGenerate.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Aluno\Form.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Aluno\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\CadastroCliente\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\CadastroPrestador\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Cidade\Form.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Cidade\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Contato\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Servicos\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout-2.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Sobre\Index original.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\Sobre\Index.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.RazorTargetAssemblyInfo.cache
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.RazorTargetAssemblyInfo.cs
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.Views.pdb
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.dll
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.pdb
+C:\Users\victor.kengoo.kodama\source\repos\GitGuilherme\myprojects\Trabalho eduardo viotti\CadastroAlunoV6\CadastroAlunoV1\obj\Debug\netcoreapp2.1\CadastroAlunoV1.csproj.CopyComplete
