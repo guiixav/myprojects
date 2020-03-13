@@ -6,25 +6,34 @@ import java.io.IOException;
 
 public class FuncionarioModel extends EntidadeModel {
     // Variáveis
-
+    private String Idd;
     private String Nome;
     private String CPF;
     private double Salario;
+    private String Username;
+    private String Password;
 
     // Construtores
     public FuncionarioModel() {
 
     }
 
-    public FuncionarioModel(String Id, String Nome, String CPF, double Salario) {
+    public FuncionarioModel(String Idd,String Nome, String CPF, double Salario, String Username, String Password) {
+        this.Idd = Idd;
         this.Nome = Nome;
         this.CPF = CPF;
         this.Salario = Salario;
+        this.Username = Username;
+        this.Password = Password;
 
     }
 
     // Getters
 
+
+    public String getIdd() {
+        return this.Idd;
+    }
 
     public String getNome() {
         return this.Nome;
@@ -38,7 +47,22 @@ public class FuncionarioModel extends EntidadeModel {
         return this.Salario;
     }
 
+    public String getUsername() {
+        return this.Username;
+    }
+
+    public String getPassword() {
+        return this.Password;
+    }
+
     // Setters
+    public void setIdd(String Idd) throws IOException {
+        Crud crud = new Crud();
+
+        if (Idd.length() > 0 && crud.ListaIds("Pedidos.txt").contains(Idd)) {
+            this.Idd = Idd;
+        }
+    }
     public void setNome(String Nome) {
         if (Nome.length() > 0) {
             this.Nome = Nome;
@@ -54,6 +78,17 @@ public class FuncionarioModel extends EntidadeModel {
     public void setSalario(double Salario) {
         if (Salario >= 0) {
             this.Salario = Salario;
+        }
+    }
+
+    public void setUsername(String Username) {
+        if (Username != "") {
+            this.Username = Username;
+        }
+    }
+    public void setPassword(String Password) {
+        if (Password != "") {
+            this.Password = Password;
         }
     }
 

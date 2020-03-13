@@ -35,9 +35,12 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
         Crud crud = new Crud();
 
         String Registro = "";
+        Registro = String.valueOf(crud.ProxId("Funcionario.txt"));
         Registro += "|" + func.getNome();
         Registro += "|" + func.getCPF();
         Registro += "|" + func.getSalario();
+        Registro += "|" + func.getUsername();
+        Registro += "|" + func.getPassword();
 
         crud.Insert(Registro, txt);
 

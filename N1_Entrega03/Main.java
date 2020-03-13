@@ -1,6 +1,3 @@
-import DAO.GerenteDAO;
-import Models.GerenteModel;
-
 import java.io.IOException;
 import java.util.Scanner;
 

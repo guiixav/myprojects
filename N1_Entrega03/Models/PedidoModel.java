@@ -7,7 +7,7 @@ import java.io.IOException;
 public class PedidoModel extends EntidadeModel{
 
     //Variáveis
-    private String Id;
+    private String Idd;
     private String ClienteId;
     private String ProdutoId;
     private double ValorTotal;
@@ -17,18 +17,27 @@ public class PedidoModel extends EntidadeModel{
 
     }
 
-    public PedidoModel(String ClienteId, String ProdutoId, double ValorTotal) {
+    public PedidoModel(String idd, String ClienteId, String ProdutoId, double ValorTotal) {
+        this.Idd = Idd;
         this.ClienteId = ClienteId;
         this.ProdutoId = ProdutoId;
         this.ValorTotal = ValorTotal;
     }
 
     //Getters
+    public String getIdd() { return this.Idd; }
     public String getClienteId() { return this.ClienteId; }
     public String getProdutoId() { return this.ProdutoId; }
     public double getValorTotal() { return this.ValorTotal; }
 
     //Setters
+    public void setIdd(String Idd) throws IOException {
+        Crud crud = new Crud();
+
+        if (Idd.length() > 0 && crud.ListaIds("Pedidos.txt").contains(Idd)) {
+            this.Idd = Idd;
+        }
+    }
     public void setClienteId(String ClienteId) throws IOException {
         Crud crud = new Crud();
 

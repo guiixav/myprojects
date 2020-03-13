@@ -25,7 +25,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro += String.valueOf(produto.getIdd());
+        Registro = String.valueOf(crud.ProxId("Produto.txt"));
         Registro += "|" + produto.getDescricao();
         Registro += "|" + produto.getPreco();
 

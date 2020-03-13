@@ -13,7 +13,7 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
     protected Map<String, String> CriaParametros(ClienteModel cliente) {
         Map<String, String> map = new HashMap<String, String>();
 
-        map.put("Id", String.valueOf(cliente.getId()));
+        map.put("Idd", String.valueOf(cliente.getIdd()));
         map.put("Nome", cliente.getNome());
         map.put("CPF", cliente.getCPF());
 

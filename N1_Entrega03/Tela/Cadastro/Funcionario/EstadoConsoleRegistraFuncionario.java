@@ -38,6 +38,10 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         funcionario.setCPF(scan.nextLine());
         System.out.println("Digite o salario do Funcionario:");
         funcionario.setSalario(Double.parseDouble(scan.nextLine()));
+        System.out.println("Digite o Username do Funcionario:");
+        funcionario.setUsername(scan.nextLine());
+        System.out.println("Digite o Password do Funcionario:");
+        funcionario.setPassword(scan.nextLine());
         func.MontaString(funcionario, Tipo);
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
