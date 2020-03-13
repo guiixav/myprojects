@@ -1,8 +1,10 @@
 package DAO;
 
+import Crud.Crud;
+
 import java.util.Map;
 
-public abstract class PadraoDAO<T> {
+public abstract class PadraoDAO<T> extends Crud {
     protected String Chave = "id";
     protected String Tabela;
     protected String Arquivo;

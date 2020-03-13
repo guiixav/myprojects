@@ -23,6 +23,9 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
     }
 
     @Override
+    protected void SetTabela() { Tabela = "Produtos.txt"; }
+
+    @Override
     protected ProdutoModel MontaModel(String registro){
         ProdutoModel produto = new ProdutoModel();
         List<String> registros = Arrays.asList(registro.split("|"));
@@ -36,8 +39,4 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         return produto;
     }
 
-    @Override
-    protected void SetTabela() {
-        Tabela = "Produtos.txt";
-    }
 }

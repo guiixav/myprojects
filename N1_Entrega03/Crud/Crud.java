@@ -35,7 +35,7 @@ public class Crud extends Metodos{
             Files.write(Paths.get(arquivo), registro.getBytes(), StandardOpenOption.APPEND);
         }
         else{
-            System.out.println("Registro já existe!");
+            System.out.println("Registro/Id já existe!");
         }
     }
 

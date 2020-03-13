@@ -13,7 +13,7 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
     protected Map<String, String> CriaParametros(PedidoModel pedido) {
         Map<String, String> map = new HashMap<String, String>();
         map.put("Id", String.valueOf(pedido.getId()));
-        map.put("Cliente", pedido.getCliente());
+        map.put("ClienteId", pedido.getClienteId());
         map.put("ValorTotal", String.valueOf(pedido.getValorTotal()));
         map.put("Produto", pedido.getProduto());
         return map;
@@ -25,7 +25,7 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
         List<String> registros = Arrays.asList(registro.split("|"));
 
         pedido.setId(Integer.parseInt(registros.get(0)));
-        pedido.setCliente(registros.get(1));
+        pedido.setClienteId(registros.get(1));
         pedido.setProduto(registros.get(2));
         pedido.setValorTotal(Double.parseDouble(registros.get(3)));
 
