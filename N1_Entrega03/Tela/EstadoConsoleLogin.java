@@ -31,23 +31,25 @@ public class EstadoConsoleLogin extends MaquinaEstadoConsole {
             }
         }
 
-        while(crud.ProcuraUser(usuario) == null){
+        while(password == null){
             System.out.println("Digite sua senha: ");
             password = scan.nextLine();
 
-            if(crud.ProcuraUser(usuario).split("|")[2] != password){
+            if(!crud.ProcuraUser(usuario).split("\\|")[2].equals(password)){
                 System.out.println("Senha errada!");
+                password = null;
             }
         }
 
         Usuario UsuarioLogado = new Usuario();
+        UsuarioLogado.setId(Integer.parseInt(crud.ProcuraUser(usuario).split("\\|")[0]));
         UsuarioLogado.setUsername(usuario);
         UsuarioLogado.setPassword(password);
-        UsuarioLogado.setFuncionarioId(Integer.parseInt(crud.ProcuraUser(usuario).split("|")[3]));
-        UsuarioLogado.setTipoUsuario(Integer.parseInt(crud.ProcuraUser(usuario).split("|")[4]));
+        UsuarioLogado.setTipoUsuario(Integer.parseInt(crud.ProcuraUser(usuario).split("\\|")[3]));
+        UsuarioLogado.setFuncionarioId(Integer.parseInt(crud.ProcuraUser(usuario).split("\\|")[4]));
 
         Config.getInstance().setUsuario(UsuarioLogado);
-        EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+        EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
         return true;
     }
 }

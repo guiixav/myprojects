@@ -16,7 +16,7 @@ public class Metodos {
             String linha;
 
             while((linha = br.readLine()) != null){
-                myList.add(Integer.parseInt(linha.split("|")[0]));
+                myList.add(Integer.parseInt(linha.split("\\|")[0]));
             }
         }
         return myList;

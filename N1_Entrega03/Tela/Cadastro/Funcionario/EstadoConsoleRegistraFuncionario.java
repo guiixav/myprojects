@@ -23,13 +23,16 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         System.out.println("2 - Não");
         String Tipo = "";
 
-        do {
-            if (scan.nextLine() == "1") {
-               Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerentes.txt";
-            } else if (scan.nextLine() == "2") {
+        int resposta = 0;
+
+        while (resposta != 1 || resposta != 2) {
+            resposta = scan.nextInt();
+            if (resposta == 1) {
+                Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerentes.txt";
+            } else if (resposta == 2) {
                 Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt";
             }
-        } while (scan.nextLine() != "1" || scan.nextLine() != "2");
+        }
 
 
         System.out.println("Digite o nome do Funcionario:");

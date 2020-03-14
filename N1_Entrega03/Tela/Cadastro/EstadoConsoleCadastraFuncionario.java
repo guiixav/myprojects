@@ -22,11 +22,11 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                EnumEstadoConsole.REGISTRA_FUNCIONARIO.getEstadoMaquina();
+                EnumEstadoConsole.REGISTRA_FUNCIONARIO.getEstadoMaquina().Executa();
             case 2:
-                EnumEstadoConsole.ATUALIZA_FUNCIONARIO.getEstadoMaquina();
+                EnumEstadoConsole.ATUALIZA_FUNCIONARIO.getEstadoMaquina().Executa();
             case 3:
-                EnumEstadoConsole.DELETA_FUNCIONARIO.getEstadoMaquina();
+                EnumEstadoConsole.DELETA_FUNCIONARIO.getEstadoMaquina().Executa();
         }
         String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionario.txt"));
         System.out.println("Digite o nome do Gerente:");

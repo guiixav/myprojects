@@ -18,7 +18,7 @@ public class Crud extends Metodos{
             String linha;
 
             while((linha = br.readLine()) != null){
-                myList.add(Integer.parseInt(linha.split("|")[0]));
+                myList.add(Integer.parseInt(linha.split("\\|")[0]));
             }
         }
         return myList;
@@ -34,7 +34,7 @@ public class Crud extends Metodos{
         List<Integer> myList = ListaIds(arquivo);
         registro += "\n";
 
-        if(!myList.contains(Integer.parseInt(registro.split("|")[0]))){
+        if(!myList.contains(Integer.parseInt(registro.split("\\|")[0]))){
             Files.write(Paths.get(arquivo), registro.getBytes(), StandardOpenOption.APPEND);
             return true;
         }
@@ -48,7 +48,7 @@ public class Crud extends Metodos{
     public Boolean Update(String registro, String arquivo, String NovoRegistro) throws IOException {
         List<Integer> myList = ListaIds(arquivo);
 
-        if(myList.contains(Integer.parseInt(registro.split("|")[0]))){
+        if(myList.contains(Integer.parseInt(registro.split("\\|")[0]))){
             File file = new File(arquivo);
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
@@ -105,9 +105,10 @@ public class Crud extends Metodos{
     public String ProcuraUser(String User){
         try(BufferedReader br = new BufferedReader(new FileReader("C:\\myprojects\\N1_Entrega03\\Arquivos\\Usuarios.txt"))){
             String linha;
-
             while(((linha = br.readLine()) != null)){
-                if(linha.split("|")[1] == User){
+                String linhaUsuario = linha.split("\\|")[1];
+
+                if(linhaUsuario.equals(User)){
                     return linha;
                 }
             }
@@ -115,10 +116,9 @@ public class Crud extends Metodos{
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            return null;
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
             return null;
         }
     }
