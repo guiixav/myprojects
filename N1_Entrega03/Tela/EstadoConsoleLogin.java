@@ -2,28 +2,52 @@ package Tela;
 
 //Alterar o metodo de validação de usuario e senha para chamar os nossos metodos.
 
-import java.util.Scanner;
+import Crud.Crud;
+import Models.FuncionarioModel;
 import Models.Usuario;
-import Crud.Metodos;
+import Tela.Cadastro.Singleton.Config;
+
+import java.io.IOException;
+import java.util.Scanner;
 
 public class EstadoConsoleLogin extends MaquinaEstadoConsole {
 
-    public boolean Executa() {
+    public boolean Executa() throws IOException {
         boolean sair = false;
-        Usuario user = new Usuario();
+        Crud crud = new Crud();
+        FuncionarioModel user = new FuncionarioModel();
+        String usuario = null;
+        String password = null;
+
         Scanner scan = new Scanner(System.in);
         System.out.println("**** LOGIN ****");
-        System.out.println("Digite seu usuário");
-        user.setUsername(scan.nextLine());
-        System.out.println("Digite sua senha");
-        user.setPassword(   scan.nextLine());
-        Metodos acesso = new Metodos();
-        boolean ValidaPassword = acesso.ValidaPassword(user.getPassword());
-        if (ValidaPassword)
-            EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
-        else {
-            System.out.println("Dados inválidos!");
+
+        while(crud.ProcuraUser(usuario) == null){
+            System.out.println("Digite seu usuário: ");
+            usuario = scan.nextLine();
+
+            if(crud.ProcuraUser(usuario) == null){
+                System.out.println("Usuário não existe !");
+            }
         }
-        return sair;
+
+        while(crud.ProcuraUser(usuario) == null){
+            System.out.println("Digite sua senha: ");
+            password = scan.nextLine();
+
+            if(crud.ProcuraUser(usuario).split("|")[2] != password){
+                System.out.println("Senha errada!");
+            }
+        }
+
+        Usuario UsuarioLogado = new Usuario();
+        UsuarioLogado.setUsername(usuario);
+        UsuarioLogado.setPassword(password);
+        UsuarioLogado.setFuncionarioId(Integer.parseInt(crud.ProcuraUser(usuario).split("|")[3]));
+        UsuarioLogado.setTipoUsuario(Integer.parseInt(crud.ProcuraUser(usuario).split("|")[4]));
+
+        Config.getInstance().setUsuario(UsuarioLogado);
+        EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+        return true;
     }
 }

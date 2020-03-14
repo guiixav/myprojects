@@ -4,7 +4,9 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Crud extends Metodos{
 
@@ -95,6 +97,28 @@ public class Crud extends Metodos{
         String registro = "";
 
         return registro;
+    }
+
+    //Procura User
+    public String ProcuraUser(String User){
+        try(BufferedReader br = new BufferedReader(new FileReader("Usuarios.txt"))){
+            String linha;
+
+            while(((linha = br.readLine()) != null)){
+                if(linha.split("|")[1] == User){
+                    return linha;
+                }
+            }
+            return null;
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            return null;
+        }
     }
 
     public void EscreveSistemaDeControle(String texto){

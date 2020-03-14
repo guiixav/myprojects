@@ -28,6 +28,7 @@ public class PedidoModel extends EntidadeModel{
     public double getValorTotal() { return this.ValorTotal; }
 
     //Setters
+
     public void setClienteId(String ClienteId) throws IOException {
         Crud crud = new Crud();
 

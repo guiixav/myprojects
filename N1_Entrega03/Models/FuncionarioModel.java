@@ -1,6 +1,6 @@
 package Models;
 
-public class FuncionarioModel extends EntidadeModel{
+public class FuncionarioModel extends Usuario {
     // Variáveis
     private String Nome;
     private String CPF;
@@ -11,7 +11,8 @@ public class FuncionarioModel extends EntidadeModel{
 
     }
 
-    public FuncionarioModel(String Nome, String CPF, double Salario) {
+    public FuncionarioModel(String Nome, String CPF, double Salario, String Username, String Password) {
+
         this.Nome = Nome;
         this.CPF = CPF;
         this.Salario = Salario;

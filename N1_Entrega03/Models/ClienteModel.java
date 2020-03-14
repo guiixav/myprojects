@@ -10,13 +10,13 @@ public class ClienteModel extends EntidadeModel{
 
     }
 
-    public ClienteModel(String Nome, String CPF) {
+    public ClienteModel( String Nome, String CPF) {
         this.Nome = Nome;
         this.CPF = CPF;
     }
 
     // Getters
-    public String getNome() {
+        public String getNome() {
         return this.Nome;
     }
 
@@ -25,6 +25,7 @@ public class ClienteModel extends EntidadeModel{
     }
 
     // Setters
+
     public void setNome(String Nome) {
         if (Nome.length() > 0) {
             this.Nome = Nome;

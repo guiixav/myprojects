@@ -1,19 +1,26 @@
 package Models;
 
+import Crud.Crud;
+
+import java.io.IOException;
+
 public class Usuario extends EntidadeModel {
     // Variáveis
     private String Username;
     private String Password;
-    private String TipoUsuario;
+    private int TipoUsuario;
+    private int FuncionarioId;
 
     //Construtores
     public Usuario(){
 
     }
 
-    public Usuario(String Username, String Password){
+    public Usuario(String Username, String Password, int TipoUsuario, int FuncionarioId){
         this.Username = Username;
         this.Password = Password;
+        this.TipoUsuario = TipoUsuario;
+        this.FuncionarioId = FuncionarioId;
     }
 
     // Getters
@@ -21,11 +28,13 @@ public class Usuario extends EntidadeModel {
         return this.Username;
     }
 
-    public String getTipoUsuario(){ return this.TipoUsuario; }
+    public int getTipoUsuario(){ return this.TipoUsuario; }
 
     public String getPassword() {
         return this.Password;
     }
+
+    public int getFuncionarioId() { return this.FuncionarioId; }
 
     // Setters
     public void setUsername(String Username) {
@@ -40,7 +49,14 @@ public class Usuario extends EntidadeModel {
         }
     }
 
-    public void setTipoUsuario(String TipoUsuario){
+    public void setTipoUsuario(int TipoUsuario){
         this.TipoUsuario = TipoUsuario;
+    }
+
+    public void setFuncionarioId(int FuncionarioId) throws IOException {
+        Crud crud = new Crud();
+        if(crud.ListaIds("Funcionarios.txt").contains(FuncionarioId)){
+            this.FuncionarioId = FuncionarioId;
+        }
     }
 }
