@@ -4,6 +4,7 @@ public class Usuario extends EntidadeModel {
     // Variáveis
     private String Username;
     private String Password;
+    private String TipoUsuario;
 
     //Construtores
     public Usuario(){
@@ -20,6 +21,8 @@ public class Usuario extends EntidadeModel {
         return this.Username;
     }
 
+    public String getTipoUsuario(){ return this.TipoUsuario; }
+
     public String getPassword() {
         return this.Password;
     }
@@ -35,5 +38,9 @@ public class Usuario extends EntidadeModel {
         if (Password.length() > 0) {
             this.Password = Password;
         }
+    }
+
+    public void setTipoUsuario(String TipoUsuario){
+        this.TipoUsuario = TipoUsuario;
     }
 }

@@ -13,20 +13,19 @@ public class Main {
         GerenteDAO gerente = new GerenteDAO();
         Scanner sn = new Scanner(System.in);
         Boolean inseriu = false;
+        GerenteModel gerenteModel = new GerenteModel();
+        gerenteModel.setId(1);
+        gerenteModel.setNome("Victor");
+        gerenteModel.setCPF("343.434.343-12");
+        gerenteModel.setSalario(2000.00);
 
-
+        ObjetoParaString(gerente);
 
         while(inseriu == false){
             System.out.println("Digite um Funcionario para inserir: ");
             inseriu = gerente.Insert(sn.nextLine(), "Arquivos/Funcionarios.txt");
             if(inseriu == true){
-                GerenteModel gerenteModel = new GerenteModel();
-                gerenteModel.setId(1);
-                gerenteModel.setNome("Victor");
-                gerenteModel.setCPF("343.434.343-12");
-                gerenteModel.setSalario(2000.00);
 
-                System.out.println(String.valueOf(gerenteModel));
             }
             else{
                 System.out.println("Funcionário já existe !");
@@ -34,7 +33,8 @@ public class Main {
         }
     }
 
-    public String ObjetoParaString(Object objeto){
+    public static String ObjetoParaString(Object objeto){
+        System.out.println(objeto.getClass());
         return "Oi";
     }
 }

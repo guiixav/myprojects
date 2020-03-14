@@ -58,6 +58,12 @@ public class Crud extends Metodos{
         return false;
     }
 
+    public Object DescobreObjeto(Object obj){
+
+
+        return obj;
+    }
+
     //Delete
     public Boolean Delete(int Id, String arquivo) throws IOException {
         List<String> linhas = new ArrayList<String>();
