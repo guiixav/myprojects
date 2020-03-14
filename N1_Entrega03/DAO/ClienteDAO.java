@@ -31,7 +31,7 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
         ClienteModel clt = new ClienteModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Cliente.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
         Registro += "|" + clt.getNome();
         Registro += "|" + clt.getCPF();
 

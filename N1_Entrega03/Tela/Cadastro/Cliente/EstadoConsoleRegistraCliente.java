@@ -31,7 +31,7 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
                 //Metodo de impressao
                 break;
             case 2:
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
         }
         return false;

@@ -15,7 +15,7 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         //FuncionarioModel funcionario = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
         System.out.println("**** CADASTRO DE CLIENTE ****");
-        String Registro = String.valueOf(crud.ProxId("Clientes.txt"));
+        String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
         System.out.println("Escolha a opção desejada:");
         System.out.println("1 - Cadastrar novo cliente");
         System.out.println("2 - Atualizar os dados de um cliente");
@@ -24,13 +24,13 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                EnumEstadoConsole.REGISTRA_CLIENTE.getEstadoMaquina();
+                EnumEstadoConsole.REGISTRA_CLIENTE.getEstadoMaquina().Executa();
             case 2:
-                EnumEstadoConsole.ATUALIZA_CLIENTE.getEstadoMaquina();
+                EnumEstadoConsole.ATUALIZA_CLIENTE.getEstadoMaquina().Executa();
             case 3:
-                EnumEstadoConsole.DELETA_CLIENTE.getEstadoMaquina();
+                EnumEstadoConsole.DELETA_CLIENTE.getEstadoMaquina().Executa();
             case 0:
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
         }
 
         Registro += scan.nextLine();
