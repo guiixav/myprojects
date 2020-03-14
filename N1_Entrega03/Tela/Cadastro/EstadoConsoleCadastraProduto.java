@@ -24,13 +24,13 @@ public class EstadoConsoleCadastraProduto extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                EnumEstadoConsole.REGISTRA_PRODUTO.getEstadoMaquina();
+                EnumEstadoConsole.REGISTRA_PRODUTO.getEstadoMaquina().Executa();
             case 2:
-                EnumEstadoConsole.ATUALIZA_PRODUTO.getEstadoMaquina();
+                EnumEstadoConsole.ATUALIZA_PRODUTO.getEstadoMaquina().Executa();
             case 3:
-                EnumEstadoConsole.DELETA_PRODUTO.getEstadoMaquina();
+                EnumEstadoConsole.DELETA_PRODUTO.getEstadoMaquina().Executa();
             case 4:
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
         }
         return false;
 

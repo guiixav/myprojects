@@ -30,17 +30,16 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
 
 
     public void MontaString(FuncionarioModel funcionario, String txt) throws IOException {
-
-        FuncionarioModel func = new FuncionarioModel();
         Crud crud = new Crud();
 
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionario.txt"));
-        Registro += "|" + func.getNome();
-        Registro += "|" + func.getCPF();
-        Registro += "|" + func.getSalario();
-        Registro += "|" + func.getUsername();
-        Registro += "|" + func.getPassword();
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt"));
+        Registro += "|" + funcionario.getNome();
+        Registro += "|" + funcionario.getCPF();
+        Registro += "|" + funcionario.getSalario();
+        Registro += "|" + funcionario.getUsername();
+        Registro += "|" + funcionario.getPassword();
+        Registro +=
 
         crud.Insert(Registro, txt);
     }

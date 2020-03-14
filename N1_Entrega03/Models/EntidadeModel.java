@@ -1,5 +1,7 @@
 package Models;
 
+import Crud.Crud;
+
 public class EntidadeModel {
     private int Id;
 

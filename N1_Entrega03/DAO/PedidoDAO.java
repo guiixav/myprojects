@@ -26,15 +26,12 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
     }
 
     public void MontaString(PedidoModel pedido) throws IOException {
-
-        PedidoModel ped = new PedidoModel();
         Crud crud = new Crud();
         String Registro = "";
         Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt"));
-        Registro += "|" + ped.getClienteId();
-        Registro += "|" + ped.getProdutoId();
-        Registro += "|" + ped.getValorTotal();
+        Registro += "|" + pedido.getClienteId();
+        Registro += "|" + pedido.getProdutoId();
+        Registro += "|" + pedido.getValorTotal();
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt");
-
     }
 }

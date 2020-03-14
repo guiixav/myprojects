@@ -25,7 +25,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produto.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt"));
         Registro += "|" + produto.getDescricao();
         Registro += "|" + produto.getPreco();
 
@@ -33,14 +33,11 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
 
     }
     public boolean MontaStringUpdate(ProdutoModel prod, String Id) throws IOException {
-
-
-        ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro += String.valueOf(produto.getId());
-        Registro += "|" + produto.getDescricao();
-        Registro += "|" + produto.getPreco();
+        Registro += String.valueOf(prod.getId());
+        Registro += "|" + prod.getDescricao();
+        Registro += "|" + prod.getPreco();
 
         if(
         crud.Update(Id,"C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt",Registro))

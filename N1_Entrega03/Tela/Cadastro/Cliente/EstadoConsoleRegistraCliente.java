@@ -20,6 +20,7 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         cliente.setNome(scan.nextLine());
         System.out.println("Digite o CPF do Cliente:");
         cliente.setCPF(scan.nextLine());
+        cliente.setId(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
         clt.MontaString(cliente);
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");

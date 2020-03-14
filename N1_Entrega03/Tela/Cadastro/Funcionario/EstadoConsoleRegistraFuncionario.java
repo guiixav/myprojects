@@ -25,26 +25,36 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
 
         int resposta = 0;
 
-        while (resposta != 1 || resposta != 2) {
+        while (resposta != 1 && resposta != 2) {
             resposta = scan.nextInt();
             if (resposta == 1) {
                 Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerentes.txt";
+                funcionario.setTipoUsuario(1);
             } else if (resposta == 2) {
                 Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt";
+                funcionario.setTipoUsuario(2);
             }
         }
 
 
         System.out.println("Digite o nome do Funcionario:");
+        scan.nextLine();
         funcionario.setNome(scan.nextLine());
+        funcionario.setId(crud.ProxId(Tipo));
+        funcionario.setFuncionarioId(crud.ProxId(Tipo));
+
         System.out.println("Digite o CPF do Funcionario:");
         funcionario.setCPF(scan.nextLine());
+
         System.out.println("Digite o salario do Funcionario:");
         funcionario.setSalario(Double.parseDouble(scan.nextLine()));
+
         System.out.println("Digite o Username do Funcionario:");
         funcionario.setUsername(scan.nextLine());
+
         System.out.println("Digite o Password do Funcionario:");
         funcionario.setPassword(scan.nextLine());
+
         func.MontaString(funcionario, Tipo);
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
@@ -56,7 +66,7 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
                 //Metodo de impressao
                 break;
             case 2:
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
         }
         return false;

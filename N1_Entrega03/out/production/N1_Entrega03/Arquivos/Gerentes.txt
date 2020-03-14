@@ -1,1 +1,1 @@
-1|Guilherme|123.123.123-02|0.02
+1|Guilherme|123.123.123-02|0.026|teste|teste|2000.0|testeuser|testepass

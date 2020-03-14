@@ -22,9 +22,9 @@ public class EstadoConsoleCadastraPedido extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                EnumEstadoConsole.REGISTRA_PEDIDO.getEstadoMaquina();
+                EnumEstadoConsole.REGISTRA_PEDIDO.getEstadoMaquina().Executa();
             case 2:
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
 
 
         }

@@ -27,16 +27,13 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
 
 
     public void MontaString(ClienteModel cliente) throws IOException {
-
-        ClienteModel clt = new ClienteModel();
         Crud crud = new Crud();
         String Registro = "";
         Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
-        Registro += "|" + clt.getNome();
-        Registro += "|" + clt.getCPF();
+        Registro += "|" + cliente.getNome();
+        Registro += "|" + cliente.getCPF();
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
-
     }
 
 
