@@ -18,8 +18,8 @@ public class FuncionarioModel extends EntidadeModel {
 
     }
 
-    public FuncionarioModel(String Idd,String Nome, String CPF, double Salario, String Username, String Password) {
-        this.Idd = Idd;
+    public FuncionarioModel(String Nome, String CPF, double Salario, String Username, String Password) {
+
         this.Nome = Nome;
         this.CPF = CPF;
         this.Salario = Salario;
@@ -31,9 +31,6 @@ public class FuncionarioModel extends EntidadeModel {
     // Getters
 
 
-    public String getIdd() {
-        return this.Idd;
-    }
 
     public String getNome() {
         return this.Nome;
@@ -56,13 +53,7 @@ public class FuncionarioModel extends EntidadeModel {
     }
 
     // Setters
-    public void setIdd(String Idd) throws IOException {
-        Crud crud = new Crud();
 
-        if (Idd.length() > 0 && crud.ListaIds("Pedidos.txt").contains(Idd)) {
-            this.Idd = Idd;
-        }
-    }
     public void setNome(String Nome) {
         if (Nome.length() > 0) {
             this.Nome = Nome;

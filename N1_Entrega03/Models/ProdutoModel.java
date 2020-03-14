@@ -10,20 +10,11 @@ public class ProdutoModel extends EntidadeModel{
 
     }
 
-    public ProdutoModel(String Idd, String Descricao, double Preco){
-        this.Idd = Idd;
+    public ProdutoModel(String Descricao, double Preco){
         this.Preco = Preco;
         this.Descricao = Descricao;
     }
 
-
-    public String getIdd() {
-        return Idd;
-    }
-
-    public void setIdd (String Idd) {
-        Idd = Idd;
-    }
 
     public String getDescricao() {
         return Descricao;

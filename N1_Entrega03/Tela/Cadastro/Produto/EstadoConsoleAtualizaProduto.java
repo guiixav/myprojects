@@ -20,13 +20,13 @@ public class EstadoConsoleAtualizaProduto extends MaquinaEstadoConsole {
 
         System.out.println("------ATUALIZAR PRODUTO-------");
         System.out.println("Digite o ID do Produto:");
-        produtoModel.setIdd(scan.nextLine());
+        produtoModel.setId(Integer.parseInt(scan.nextLine()));
         System.out.println("Digite a descrição do novo produto:");
         produtoModel.setDescricao(scan.nextLine());
         System.out.println("Digite o preço do novo produto:");
         produtoModel.setPreco(Double.parseDouble(scan.nextLine()));
 
-            if (produtoDAO.MontaStringUpdate(produtoModel,produtoModel.getIdd()) == false ){
+            if (produtoDAO.MontaStringUpdate(produtoModel,String.valueOf(produtoModel.getId())) == false ){
                 System.out.println("Id inválido!!");
         }
         while(produtoDAO.Delete(produtoModel.getId(),"Produtos.txt") == false);

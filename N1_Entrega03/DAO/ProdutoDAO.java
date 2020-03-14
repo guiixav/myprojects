@@ -12,7 +12,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
     protected Map<String, String> CriaParametros(ProdutoModel produto) {
         Map<String, String> map = new HashMap<String, String>();
 
-        map.put("Idd", String.valueOf(produto.getIdd()));
+        map.put("Id", String.valueOf(produto.getId()));
         map.put("Descricao", produto.getDescricao());
         map.put("Preco", String.valueOf(produto.getPreco()));
 
@@ -38,7 +38,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro += String.valueOf(produto.getIdd());
+        Registro += String.valueOf(produto.getId());
         Registro += "|" + produto.getDescricao();
         Registro += "|" + produto.getPreco();
 

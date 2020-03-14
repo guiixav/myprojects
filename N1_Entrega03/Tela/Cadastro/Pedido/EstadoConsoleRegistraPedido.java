@@ -35,12 +35,12 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         do {
             System.out.println("Digite o ID do Produto:");
             pedido.setProdutoId(scan.nextLine());
-            if (crud.VirificaTxt(Integer.parseInt(pedido.getProdutoId()), "Clientes.txt") == true)
+            if (crud.VirificaTxt(Integer.parseInt(pedido.getProdutoId()), "Produto.txt") == true)
                 break;
             else {
-                System.out.println("Cliente Não existe!!!");
+                System.out.println("Produto Não existe!!!");
             }
-        } while (crud.VirificaTxt(Integer.parseInt(pedido.getProdutoId()), "Clientes.txt") == false);
+        } while (crud.VirificaTxt(Integer.parseInt(pedido.getProdutoId()), "Produto.txt") == false);
 
         System.out.println("Informe a quantidade de produtos:");
         int qtd = Integer.parseInt(scan.nextLine());
