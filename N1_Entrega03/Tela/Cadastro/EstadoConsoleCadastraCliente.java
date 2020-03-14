@@ -40,7 +40,7 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         //funcionario.setCPF(scan.nextLine());
         //funcionario.setSalario(Double.parseDouble( scan.nextLine() ));
 
-        crud.Insert(Registro, "Clientes.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
 
         return false;
     }

@@ -16,15 +16,16 @@ public class EstadoConsoleDeletaFuncionario extends MaquinaEstadoConsole {
         FuncionarioDAO funcDAO = new FuncionarioDAO();
         FuncionarioModel funcModel = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
+        String arquivo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt";
 
         System.out.println("------DELETAR FUNCIONARIO-------");
         do {
             System.out.println("Digite o Id do Funcionario:");
             funcModel.setId(Integer.parseInt(scan.nextLine()));
-            if (funcDAO.Delete(funcModel.getId(),"Funcionarios.txt") == false)
+            if (funcDAO.Delete(funcModel.getId(),arquivo) == false)
                 System.out.println("Id inválido!!");
         }
-        while(funcDAO.Delete(funcModel.getId(),"Funcionarios.txt") == false);
+        while(funcDAO.Delete(funcModel.getId(),arquivo) == false);
 
         System.out.println("Funcionario deletado com sucesso!");
 

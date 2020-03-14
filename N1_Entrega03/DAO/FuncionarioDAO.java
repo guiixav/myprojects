@@ -25,7 +25,7 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
 
     @Override
     protected void SetTabela() {
-        Tabela = "Funcionarios.txt";
+        Tabela = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt";
     }
 
 
@@ -35,7 +35,7 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
         Crud crud = new Crud();
 
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("Funcionario.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionario.txt"));
         Registro += "|" + func.getNome();
         Registro += "|" + func.getCPF();
         Registro += "|" + func.getSalario();

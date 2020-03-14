@@ -22,7 +22,7 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
 
     @Override
     protected void SetTabela() {
-        Tabela = "Clientes.txt";
+        Tabela = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt";
     }
 
 
@@ -31,11 +31,11 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
         ClienteModel clt = new ClienteModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("Cliente.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Cliente.txt"));
         Registro += "|" + clt.getNome();
         Registro += "|" + clt.getCPF();
 
-        crud.Insert(Registro, "Clientes.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
 
     }
 

@@ -1,10 +1,10 @@
 package Tela;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class EstadoConsoleBemvindo extends MaquinaEstadoConsole {
-    public boolean Executa()
-    {
+    public boolean Executa() throws IOException {
         boolean sair = false;
         System.out.println("Bem Vindo!");
         System.out.println("Por favor informe a opção desejada:");
@@ -18,7 +18,7 @@ public class EstadoConsoleBemvindo extends MaquinaEstadoConsole {
                 sair = true;
                 break;
             case 1:
-                EnumEstadoConsole.LOGIN.getEstadoMaquina();
+                EnumEstadoConsole.LOGIN.getEstadoMaquina().Executa();
                 break;
         }
         return sair;

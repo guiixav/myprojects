@@ -19,33 +19,36 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         PedidoModel pedido = new PedidoModel();
         PedidoDAO pedidoDAO = new PedidoDAO();
         ProdutoModel prod = new ProdutoModel();
+        String ArquivoPedidos = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt";
+        String ArquivoProdutos = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt";
+        String ArquivoClientes = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt";
 
         String produto = "";
-        String Registro = String.valueOf(crud.ProxId("Pedidos.txt"));
+        String Registro = String.valueOf(crud.ProxId(ArquivoPedidos));
         System.out.println("------REGISTRO DE NOVOS PEDIDOS-------");
 
 
         do {
             System.out.println("Digite o ID do Cliente solicitante:");
             pedido.setClienteId(scan.nextLine());
-            if (crud.ListaIds("Clientes.txt").contains(pedido.getId()))
+            if (crud.ListaIds(ArquivoClientes).contains(pedido.getId()))
                 break;
             else {
                 System.out.println("Cliente Não existe!!!");
             }
-        } while (!crud.ListaIds("Clientes.txt").contains(pedido.getId()));
+        } while (!crud.ListaIds(ArquivoClientes).contains(pedido.getId()));
 
 
 
         do {
             System.out.println("Digite o ID do Produto:");
             prod.setId(Integer.parseInt(scan.nextLine()));
-            if (crud.ListaIds("Produtos.txt").contains(prod.getId()))
+            if (crud.ListaIds(ArquivoProdutos).contains(prod.getId()))
                 break;
             else {
                 System.out.println("Produto Não existe!!!");
             }
-        } while (!crud.ListaIds("Produtos.txt").contains(prod.getId()));
+        } while (!crud.ListaIds(ArquivoProdutos).contains(prod.getId()));
 
 
         System.out.println("Informe a quantidade de produtos:");

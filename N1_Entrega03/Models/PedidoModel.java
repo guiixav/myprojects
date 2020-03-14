@@ -32,14 +32,14 @@ public class PedidoModel extends EntidadeModel{
     public void setClienteId(String ClienteId) throws IOException {
         Crud crud = new Crud();
 
-        if (ClienteId.length() > 0 && crud.ListaIds("Clientes.txt").contains(ClienteId)) {
+        if (ClienteId.length() > 0 && crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt").contains(ClienteId)) {
             this.ClienteId = ClienteId;
         }
     }
 
     public void setProdutoId(String ProdutoId) throws IOException {
         Crud crud = new Crud();
-        if (ProdutoId.length() > 0 && crud.ListaIds("Produtos.txt").contains(ProdutoId)) {
+        if (ProdutoId.length() > 0 && crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt").contains(ProdutoId)) {
             this.ProdutoId = ProdutoId;
         }
     }

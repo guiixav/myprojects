@@ -29,7 +29,7 @@ public class EstadoConsoleAtualizaProduto extends MaquinaEstadoConsole {
             if (produtoDAO.MontaStringUpdate(produtoModel,String.valueOf(produtoModel.getId())) == false ){
                 System.out.println("Id inválido!!");
         }
-        while(produtoDAO.Delete(produtoModel.getId(),"Produtos.txt") == false);
+        while(produtoDAO.Delete(produtoModel.getId(),"C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt") == false);
 
         System.out.println("Produto deletado com sucesso!");
 

@@ -25,9 +25,9 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
 
         do {
             if (scan.nextLine() == "1") {
-               Tipo = "Gerentes.txt";
+               Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerentes.txt";
             } else if (scan.nextLine() == "2") {
-                Tipo = "Funcionarios.txt";
+                Tipo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt";
             }
         } while (scan.nextLine() != "1" || scan.nextLine() != "2");
 

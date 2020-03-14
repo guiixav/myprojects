@@ -28,23 +28,7 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
             case 3:
                 EnumEstadoConsole.DELETA_FUNCIONARIO.getEstadoMaquina();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        String Registro = String.valueOf(crud.ProxId("Funcionario.txt"));
+        String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionario.txt"));
         System.out.println("Digite o nome do Gerente:");
         Registro += scan.nextLine();
         //funcionario.setNome(scan.nextLine());
@@ -55,7 +39,7 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
         Registro += "|" + scan.nextLine();
         //funcionario.setSalario(Double.parseDouble( scan.nextLine() ));
 
-        crud.Insert(Registro, "Gerente.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerente.txt");
 
         return false;
     }

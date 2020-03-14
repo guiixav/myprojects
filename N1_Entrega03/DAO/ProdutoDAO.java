@@ -25,11 +25,11 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("Produto.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produto.txt"));
         Registro += "|" + produto.getDescricao();
         Registro += "|" + produto.getPreco();
 
-        crud.Insert(Registro, "Produtos.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt");
 
     }
     public boolean MontaStringUpdate(ProdutoModel prod, String Id) throws IOException {
@@ -43,7 +43,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         Registro += "|" + produto.getPreco();
 
         if(
-        crud.Update(Id,"Produtos.txt",Registro))
+        crud.Update(Id,"C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt",Registro))
         {
           return true;
         }
@@ -53,7 +53,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
 
 
     @Override
-    protected void SetTabela() { Tabela = "Produtos.txt"; }
+    protected void SetTabela() { Tabela = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt"; }
 
 
 }

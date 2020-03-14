@@ -82,14 +82,16 @@ public class Crud extends Metodos{
         List<Integer> ListadeIds = ListaIds(arquivo);
         if(ListadeIds.contains(Id)){
             linhas.remove(ListadeIds.indexOf(Id));
+            FileWriter fw = new FileWriter(arquivo);
+            for(String str: linhas){
+                fw.write(str + System.lineSeparator());
+            }
+            fw.close();
+            return true;
         }
-
-        FileWriter fw = new FileWriter(arquivo);
-        for(String str: linhas){
-            fw.write(str + System.lineSeparator());
+        else{
+            return false;
         }
-        fw.close();
-        return true;
     }
 
     //Select
@@ -101,7 +103,7 @@ public class Crud extends Metodos{
 
     //Procura User
     public String ProcuraUser(String User){
-        try(BufferedReader br = new BufferedReader(new FileReader("Usuarios.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("C:\\myprojects\\N1_Entrega03\\Arquivos\\Usuarios.txt"))){
             String linha;
 
             while(((linha = br.readLine()) != null)){

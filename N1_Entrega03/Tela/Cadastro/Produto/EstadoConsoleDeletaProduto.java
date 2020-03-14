@@ -17,15 +17,16 @@ public class EstadoConsoleDeletaProduto extends MaquinaEstadoConsole {
         ProdutoDAO produtoDAO = new ProdutoDAO();
         ProdutoModel produtoModel = new ProdutoModel();
         Scanner scan = new Scanner(System.in);
+        String arquivo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt";
 
         System.out.println("------DELETAR PRODUTO-------");
         do {
             System.out.println("Digite o Id do Produto:");
             produtoModel.setId(Integer.parseInt(scan.nextLine()));
-            if (produtoDAO.Delete(produtoModel.getId(),"Produtos.txt") == false)
+            if (produtoDAO.Delete(produtoModel.getId(), arquivo) == false)
                 System.out.println("Id inválido!!");
         }
-        while(produtoDAO.Delete(produtoModel.getId(),"Produtos.txt") == false);
+        while(produtoDAO.Delete(produtoModel.getId(), arquivo) == false);
 
         System.out.println("Prdouto deletado com sucesso!");
 

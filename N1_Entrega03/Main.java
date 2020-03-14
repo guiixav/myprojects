@@ -10,10 +10,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        estadoConsole = EnumEstadoConsole.BEM_VINDO.getEstadoMaquina();;
         Boolean saida = false;
         while (!saida){
-            saida = estadoConsole.Executa();
+            saida = EnumEstadoConsole.BEM_VINDO.getEstadoMaquina().Executa();
         }
     }
 }

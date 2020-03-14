@@ -55,7 +55,7 @@ public class Usuario extends EntidadeModel {
 
     public void setFuncionarioId(int FuncionarioId) throws IOException {
         Crud crud = new Crud();
-        if(crud.ListaIds("Funcionarios.txt").contains(FuncionarioId)){
+        if(crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt").contains(FuncionarioId)){
             this.FuncionarioId = FuncionarioId;
         }
     }

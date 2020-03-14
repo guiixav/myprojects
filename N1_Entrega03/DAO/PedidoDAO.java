@@ -22,7 +22,7 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
 
     @Override
     protected void SetTabela() {
-        Tabela = "Pedidos.txt";
+        Tabela = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt";
     }
 
     public void MontaString(PedidoModel pedido) throws IOException {
@@ -30,11 +30,11 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
         PedidoModel ped = new PedidoModel();
         Crud crud = new Crud();
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("Pedidos.txt"));
+        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt"));
         Registro += "|" + ped.getClienteId();
         Registro += "|" + ped.getProdutoId();
         Registro += "|" + ped.getValorTotal();
-        crud.Insert(Registro, "Pedidos.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt");
 
     }
 }

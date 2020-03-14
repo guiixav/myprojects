@@ -17,15 +17,16 @@ public class EstadoConsoleDeletaCliente extends MaquinaEstadoConsole {
         ClienteDAO clienteDAO = new ClienteDAO();
         ClienteModel clienteModel = new ClienteModel();
         Scanner scan = new Scanner(System.in);
+        String arquivo = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt";
 
         System.out.println("------DELETAR CLIENTE-------");
         do {
             System.out.println("Digite o Id do Cliente:");
             clienteModel.setId(Integer.parseInt(scan.nextLine()));
-            if (clienteDAO.Delete(clienteModel.getId(),"Clientes.txt") == false)
+            if (clienteDAO.Delete(clienteModel.getId(),arquivo) == false)
                 System.out.println("Id inválido!!");
         }
-        while(clienteDAO.Delete(clienteModel.getId(),"Clientes.txt") == false);
+        while(clienteDAO.Delete(clienteModel.getId(),arquivo) == false);
 
         System.out.println("Cliente deletado com sucesso!");
 
