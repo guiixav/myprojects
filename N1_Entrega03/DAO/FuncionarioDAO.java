@@ -43,6 +43,5 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
         Registro += "|" + func.getPassword();
 
         crud.Insert(Registro, txt);
-
     }
 }
