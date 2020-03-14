@@ -34,6 +34,8 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
         Registro += "|" + cliente.getCPF();
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
+
+        crud.Imprimir("Insert", Registro);
     }
 
 

@@ -1,11 +1,16 @@
 package Crud;
 
+import Tela.Cadastro.Singleton.Config;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class Crud extends Metodos{
@@ -58,12 +63,6 @@ public class Crud extends Metodos{
             return true;
         }
         return false;
-    }
-
-    public Object DescobreObjeto(Object obj){
-
-
-        return obj;
     }
 
     //Delete
@@ -123,7 +122,16 @@ public class Crud extends Metodos{
         }
     }
 
-    public void EscreveSistemaDeControle(String texto){
+    public String Imprimir(String acao, String alteracao){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        String texto = "";
 
+        switch (acao){
+            case "Insert":
+                texto += String.format("[%s] realizado por [%s] na data: [%s] \nValor inserido: %s", acao, String.valueOf(Config.getInstance().getUsuario()), date, alteracao);
+        }
+
+        return texto;
     }
 }

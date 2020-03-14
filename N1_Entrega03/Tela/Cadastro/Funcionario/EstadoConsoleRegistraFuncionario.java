@@ -40,14 +40,21 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         System.out.println("Digite o nome do Funcionario:");
         scan.nextLine();
         funcionario.setNome(scan.nextLine());
-        funcionario.setId(crud.ProxId(Tipo));
         funcionario.setFuncionarioId(crud.ProxId(Tipo));
 
         System.out.println("Digite o CPF do Funcionario:");
         funcionario.setCPF(scan.nextLine());
 
-        System.out.println("Digite o salario do Funcionario:");
-        funcionario.setSalario(Double.parseDouble(scan.nextLine()));
+        while(true){
+            try {
+                System.out.println("Digite o salario do Funcionario:");
+                funcionario.setSalario(Double.parseDouble(scan.nextLine()));
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Salário inválido!");
+                continue;
+            }
+        }
 
         System.out.println("Digite o Username do Funcionario:");
         funcionario.setUsername(scan.nextLine());

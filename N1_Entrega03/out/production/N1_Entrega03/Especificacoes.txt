@@ -1,10 +1,18 @@
-Guilherme Xavier
-RA: 0821700
+Guilherme Quaquio Xavier
+RA: 082170009
 
-Victor Kengoo
+Victor Kengoo Morisue Kodama
 RA: 082170030
 
 IDE usado: Intellij 2019.3.3
 
 OBS:
-Deixar a pasta myprojects no diretório C:/
+ - Deixar a pasta myprojects no diretório C:/
+ - Na Tela de Login, usar schema:
+	Funcionario:
+		user: adminFunc
+		pass: adminFunc
+		
+	Gerente:
+		user: adminMng
+		pass: adminMng

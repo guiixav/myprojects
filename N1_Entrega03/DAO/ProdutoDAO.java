@@ -30,7 +30,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         Registro += "|" + produto.getPreco();
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt");
-
+        crud.Imprimir("Insert", Registro);
     }
     public boolean MontaStringUpdate(ProdutoModel prod, String Id) throws IOException {
         Crud crud = new Crud();
@@ -39,8 +39,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         Registro += "|" + prod.getDescricao();
         Registro += "|" + prod.getPreco();
 
-        if(
-        crud.Update(Id,"C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt",Registro))
+        if(crud.Update(Id,"C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt",Registro))
         {
           return true;
         }

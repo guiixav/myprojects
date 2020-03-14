@@ -25,8 +25,6 @@ public class EstadoConsoleCadastraPedido extends MaquinaEstadoConsole {
                 EnumEstadoConsole.REGISTRA_PEDIDO.getEstadoMaquina().Executa();
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
-
-
         }
         return false;
 

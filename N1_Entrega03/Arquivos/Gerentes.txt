@@ -1,3 +1,2 @@
-1|Guilherme|123.123.123-02|0.02
 6|teste|teste|2000.0|testeuser|testepass
-6|treste|123|2000.0|testeuser|testepass
+7|qwer|qwer|200.0|qwer|qwer

@@ -14,9 +14,9 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
     protected Map<String, String> CriaParametros(PedidoModel pedido) {
         Map<String, String> map = new HashMap<String, String>();
         map.put("Id", String.valueOf(pedido.getId()));
-        map.put("ClienteId", pedido.getClienteId());
+        map.put("ClienteId", String.valueOf(pedido.getClienteId()));
         map.put("ValorTotal", String.valueOf(pedido.getValorTotal()));
-        map.put("Produto", pedido.getProdutoId());
+        map.put("ProdutoId", String.valueOf(pedido.getProdutoId()));
         return map;
     }
 
@@ -28,10 +28,13 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
     public void MontaString(PedidoModel pedido) throws IOException {
         Crud crud = new Crud();
         String Registro = "";
+
         Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt"));
         Registro += "|" + pedido.getClienteId();
         Registro += "|" + pedido.getProdutoId();
         Registro += "|" + pedido.getValorTotal();
+
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt");
+        crud.Imprimir("Insert", Registro);
     }
 }

@@ -1,4 +1,1 @@
 1|Guilherme|123.123.123-02|0.02
-2|Guilherme|123.123.123-02|0.02
-3|Victor|123.123.123-02|0.02
-5|admin|admin|admin

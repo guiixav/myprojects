@@ -33,14 +33,14 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
         Crud crud = new Crud();
 
         String Registro = "";
-        Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt"));
+        Registro = String.valueOf(crud.ProxId(txt));
         Registro += "|" + funcionario.getNome();
         Registro += "|" + funcionario.getCPF();
         Registro += "|" + funcionario.getSalario();
         Registro += "|" + funcionario.getUsername();
         Registro += "|" + funcionario.getPassword();
-        Registro +=
 
         crud.Insert(Registro, txt);
+        crud.Imprimir("Insert", Registro);
     }
 }

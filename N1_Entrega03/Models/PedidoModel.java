@@ -7,8 +7,8 @@ import java.io.IOException;
 public class PedidoModel extends EntidadeModel{
 
     //Variáveis
-    private String ClienteId;
-    private String ProdutoId;
+    private int ClienteId;
+    private int ProdutoId;
     private double ValorTotal;
 
     //Construtores
@@ -16,30 +16,30 @@ public class PedidoModel extends EntidadeModel{
 
     }
 
-    public PedidoModel(String ClienteId, String ProdutoId, double ValorTotal) {
+    public PedidoModel(int ClienteId, int ProdutoId, double ValorTotal) {
         this.ClienteId = ClienteId;
         this.ProdutoId = ProdutoId;
         this.ValorTotal = ValorTotal;
     }
 
     //Getters
-    public String getClienteId() { return this.ClienteId; }
-    public String getProdutoId() { return this.ProdutoId; }
+    public int getClienteId() { return this.ClienteId; }
+    public int getProdutoId() { return this.ProdutoId; }
     public double getValorTotal() { return this.ValorTotal; }
 
     //Setters
 
-    public void setClienteId(String ClienteId) throws IOException {
+    public void setClienteId(int ClienteId) throws IOException {
         Crud crud = new Crud();
 
-        if (ClienteId.length() > 0 && crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt").contains(ClienteId)) {
+        if (crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt").contains(ClienteId)) {
             this.ClienteId = ClienteId;
         }
     }
 
-    public void setProdutoId(String ProdutoId) throws IOException {
+    public void setProdutoId(int ProdutoId) throws IOException {
         Crud crud = new Crud();
-        if (ProdutoId.length() > 0 && crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt").contains(ProdutoId)) {
+        if (crud.ListaIds("C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt").contains(ProdutoId)) {
             this.ProdutoId = ProdutoId;
         }
     }

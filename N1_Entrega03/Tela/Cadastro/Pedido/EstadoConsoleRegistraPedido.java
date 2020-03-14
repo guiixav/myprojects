@@ -30,25 +30,26 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
 
         do {
             System.out.println("Digite o ID do Cliente solicitante:");
-            pedido.setClienteId(scan.nextLine());
-            if (crud.ListaIds(ArquivoClientes).contains(pedido.getId()))
+            pedido.setClienteId(Integer.parseInt(scan.nextLine()));
+            if (crud.ListaIds(ArquivoClientes).contains(pedido.getClienteId()))
                 break;
             else {
                 System.out.println("Cliente Não existe!!!");
             }
-        } while (!crud.ListaIds(ArquivoClientes).contains(pedido.getId()));
+        } while (!crud.ListaIds(ArquivoClientes).contains(pedido.getClienteId()));
 
 
-
+        int ProdutoId;
         do {
             System.out.println("Digite o ID do Produto:");
-            prod.setId(Integer.parseInt(scan.nextLine()));
-            if (crud.ListaIds(ArquivoProdutos).contains(prod.getId()))
-                break;
-            else {
+            ProdutoId = Integer.parseInt(scan.nextLine());
+
+            if (crud.ListaIds(ArquivoProdutos).contains(ProdutoId)) {
+                pedido.setProdutoId(ProdutoId);
+            } else {
                 System.out.println("Produto Não existe!!!");
             }
-        } while (!crud.ListaIds(ArquivoProdutos).contains(prod.getId()));
+        } while (!crud.ListaIds(ArquivoProdutos).contains(ProdutoId));
 
 
         System.out.println("Informe a quantidade de produtos:");
@@ -59,11 +60,12 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         pedido.setValorTotal(Valortotal);
 
         pedidoDAO.MontaString(pedido);
-        //Colocar aqui o metodo de LOG;
-        int opcao2 = scan.nextInt();
+
         System.out.println("Deseja imprimir o novo pedido?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
+        int opcao2 = scan.nextInt();
+
         switch (opcao2) {
             case 1:
                 //Metodo de impressao
