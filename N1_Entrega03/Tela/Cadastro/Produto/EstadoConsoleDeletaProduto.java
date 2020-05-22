@@ -43,7 +43,7 @@ public class EstadoConsoleDeletaProduto extends MaquinaEstadoConsole {
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
         }
-        return false;
+        return true;
 
     }
 }

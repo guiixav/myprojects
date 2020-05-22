@@ -19,6 +19,7 @@ public class EstadoConsoleBemvindo extends MaquinaEstadoConsole {
                 break;
             case 1:
                 EnumEstadoConsole.LOGIN.getEstadoMaquina().Executa();
+                sair = true;
                 break;
         }
         return sair;

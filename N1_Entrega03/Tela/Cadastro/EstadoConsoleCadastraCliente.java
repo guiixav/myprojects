@@ -25,23 +25,27 @@ public class EstadoConsoleCadastraCliente extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_CLIENTE.getEstadoMaquina().Executa();
+                break;
             case 2:
                 EnumEstadoConsole.ATUALIZA_CLIENTE.getEstadoMaquina().Executa();
+                break;
             case 3:
                 EnumEstadoConsole.DELETA_CLIENTE.getEstadoMaquina().Executa();
+                break;
             case 0:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                break;
         }
 
-        Registro += scan.nextLine();
+        //Registro += scan.nextLine();
         //funcionario.setNome(scan.nextLine());
-        System.out.println("Digite o CPF do Cliente:");
-        Registro += "|" + scan.nextLine();
+        //System.out.println("Digite o CPF do Cliente:");
+        //Registro += "|" + scan.nextLine();
         //funcionario.setCPF(scan.nextLine());
         //funcionario.setSalario(Double.parseDouble( scan.nextLine() ));
 
-        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
+        //crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
 
-        return false;
+        return true;
     }
 }

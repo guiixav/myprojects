@@ -1,6 +1,7 @@
 package Crud;
 
 import Tela.Cadastro.Singleton.Config;
+import Tela.Cadastro.Singleton.GerenciadorAuditoria;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -122,16 +123,16 @@ public class Crud extends Metodos{
         }
     }
 
-    public String Imprimir(String acao, String alteracao){
+    public void Imprimir(String acao, String alteracao){
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         String texto = "";
 
         switch (acao){
             case "Insert":
-                texto += String.format("[%s] realizado por [%s] na data: [%s] \nValor inserido: %s", acao, String.valueOf(Config.getInstance().getUsuario()), date, alteracao);
+                texto += String.format("[%s] realizado por [%s] na data: [%s] \nValor inserido: %s.\n\n", acao,
+                        String.valueOf(Config.getInstance().getUsuario().getUsername()), date, alteracao);
         }
-
-        return texto;
+        GerenciadorAuditoria.getInstance().adicionaMsgAuditoria(texto);
     }
 }

@@ -25,14 +25,18 @@ public class EstadoConsoleCadastraProduto extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_PRODUTO.getEstadoMaquina().Executa();
+                break;
             case 2:
                 EnumEstadoConsole.ATUALIZA_PRODUTO.getEstadoMaquina().Executa();
+                break;
             case 3:
                 EnumEstadoConsole.DELETA_PRODUTO.getEstadoMaquina().Executa();
+                break;
             case 4:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                break;
         }
-        return false;
+        return true;
 
     }
 }

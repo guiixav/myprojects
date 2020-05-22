@@ -23,24 +23,24 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_FUNCIONARIO.getEstadoMaquina().Executa();
+                break;
             case 2:
                 EnumEstadoConsole.ATUALIZA_FUNCIONARIO.getEstadoMaquina().Executa();
+                break;
             case 3:
                 EnumEstadoConsole.DELETA_FUNCIONARIO.getEstadoMaquina().Executa();
+                break;
         }
-        String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionario.txt"));
+        /*String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt"));
         System.out.println("Digite o nome do Gerente:");
         Registro += scan.nextLine();
-        //funcionario.setNome(scan.nextLine());
         System.out.println("Digite o CPF do Gerente:");
         Registro += "|" + scan.nextLine();
-        //funcionario.setCPF(scan.nextLine());
         System.out.println("Digite o SALARIO do Gerente:");
         Registro += "|" + scan.nextLine();
-        //funcionario.setSalario(Double.parseDouble( scan.nextLine() ));
 
-        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerente.txt");
+        crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Gerentes.txt");*/
 
-        return false;
+        return true;
     }
 }

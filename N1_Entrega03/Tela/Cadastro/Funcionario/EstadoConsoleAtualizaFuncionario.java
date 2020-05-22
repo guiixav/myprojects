@@ -7,6 +7,6 @@ import java.io.IOException;
 public class EstadoConsoleAtualizaFuncionario extends MaquinaEstadoConsole {
     @Override
     public boolean Executa() throws IOException {
-        return false;
+        return true;
     }
 }

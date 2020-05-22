@@ -62,20 +62,21 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         System.out.println("Digite o Password do Funcionario:");
         funcionario.setPassword(scan.nextLine());
 
-        func.MontaString(funcionario, Tipo);
-        System.out.println("Deseja imprimir novo registro?");
+        System.out.println("Deseja imprimir o registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
         //Colocar aqui o metodo de LOG;
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                //Metodo de impressao
+                //crud.Imprimir("Insert", String.format("%s, no arquivo Funcionarios.txt", funcionario.getId()));
+                func.MontaString(funcionario, Tipo);
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
         }
-        return false;
+        return true;
     }
 }

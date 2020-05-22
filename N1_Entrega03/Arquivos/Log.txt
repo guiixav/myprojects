@@ -1,0 +1,9 @@
+[Insert] realizado por [Models.Usuario@67424e82] na data: [Fri May 22 01:31:10 BRT 2020]
+Valor inserido: 15|rty|rty|159.0|rty|rty.
+
+[Insert] realizado por [Models.Usuario@3a883ce7] na data: [Fri May 22 01:34:03 BRT 2020]
+Valor inserido: 16|yhj|yhj|153.0|yhj|yhj.
+
+[Insert] realizado por [adminMng] na data: [Fri May 22 01:44:45 BRT 2020] 
+Valor inserido: 17|ikl|ikl|12.0|ujk|ujk.
+

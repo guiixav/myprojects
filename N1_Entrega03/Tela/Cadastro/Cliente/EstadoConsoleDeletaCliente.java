@@ -43,7 +43,7 @@ public class EstadoConsoleDeletaCliente extends MaquinaEstadoConsole {
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina();
                 break;
         }
-        return false;
+        return true;
 
     }
 }

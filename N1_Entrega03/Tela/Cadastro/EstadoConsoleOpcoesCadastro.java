@@ -5,7 +5,6 @@ import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -21,7 +20,6 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
 
         List<Integer> cases = Arrays.asList(0, 1, 2, 3, 4);
 
-        System.out.println("Bem Vindo!");
         System.out.println("Escolha uma das opções abaixo para cadastro:");
         System.out.println("1 - Cadastro de funcionário");
         System.out.println("2 - Cadastro de Cliente");
@@ -29,8 +27,8 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
         System.out.println("4 - Cadastro de produto");
         System.out.println("0 - Sair");
         Scanner scan = new Scanner(System.in);
-        int opcao = scan.nextInt();
 
+        int opcao = scan.nextInt();
         switch(opcao)
         {
             case 1:
@@ -41,7 +39,6 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
                     System.out.println("Perfil logado não é de Gerente");
                 }
                 break;
-
             case 2:
                 EnumEstadoConsole.CADASTRO_CLIENTE.getEstadoMaquina().Executa();
                 break;
@@ -55,7 +52,6 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
                 EnumEstadoConsole.BEM_VINDO.getEstadoMaquina().Executa();
                 break;
         }
-        return false;
+        return true;
     }
-
 }

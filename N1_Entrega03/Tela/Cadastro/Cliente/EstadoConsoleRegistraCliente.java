@@ -1,11 +1,12 @@
 package Tela.Cadastro.Cliente;
+import Crud.Crud;
 import DAO.ClienteDAO;
 import Models.ClienteModel;
 import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
-import java.util.Scanner;
+
 import java.io.IOException;
-import Crud.Crud;
+import java.util.Scanner;
 
 public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
     @Override
@@ -31,11 +32,13 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
+                crud.Imprimir("Insert", String.format("%s, no arquivo Clientes.txt", cliente.getId()));
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
         }
-        return false;
+        return true;
     }
 }

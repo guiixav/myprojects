@@ -1,9 +1,8 @@
+import Tela.Cadastro.Singleton.GerenciadorAuditoria;
 import Tela.EnumEstadoConsole;
 import Tela.MaquinaEstadoConsole;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 
@@ -11,18 +10,18 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) throws IOException, InterruptedException {
         Boolean saida = false;
-        while (!saida){
-            saida = EnumEstadoConsole.BEM_VINDO.getEstadoMaquina().Executa();
-        }
-    }
 
-//    public static void Testa(){
-//        String texto = "oi|a|bc";
-//        List<String> linhas = Arrays.asList(texto.split("\\|"));
-//        System.out.println(linhas);
-//    }
+        GerenciadorAuditoria.getInstance().ativar();
+        try{
+            while (!saida){
+                saida = EnumEstadoConsole.BEM_VINDO.getEstadoMaquina().Executa();
+            }
+        } finally {
+            GerenciadorAuditoria.getInstance().desativar();
+        }
+
+    }
 }
 
