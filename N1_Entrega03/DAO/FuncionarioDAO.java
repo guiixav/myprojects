@@ -29,7 +29,7 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
     }
 
 
-    public void MontaString(FuncionarioModel funcionario, String txt) throws IOException {
+    public void MontaString(FuncionarioModel funcionario, String txt, String acao) throws IOException {
         Crud crud = new Crud();
 
         String Registro = "";
@@ -41,6 +41,6 @@ public class FuncionarioDAO extends PadraoDAO<FuncionarioModel>{
         Registro += "|" + funcionario.getPassword();
 
         crud.Insert(Registro, txt);
-        crud.Imprimir("Insert", Registro);
+        crud.Imprimir(acao, Registro);
     }
 }

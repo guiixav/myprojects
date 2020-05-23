@@ -2,7 +2,6 @@ package DAO;
 
 import Crud.Crud;
 import Models.ClienteModel;
-import Models.FuncionarioModel;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -26,7 +25,7 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
     }
 
 
-    public void MontaString(ClienteModel cliente) throws IOException {
+    public void MontaString(ClienteModel cliente, String acao) throws IOException {
         Crud crud = new Crud();
         String Registro = "";
         Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
@@ -35,9 +34,8 @@ public class ClienteDAO extends PadraoDAO<ClienteModel>{
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt");
 
-        crud.Imprimir("Insert", Registro);
+        crud.Imprimir(acao, Registro);
     }
-
 
 }
 

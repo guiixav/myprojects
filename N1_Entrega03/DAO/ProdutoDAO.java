@@ -20,7 +20,7 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         return map;
     }
 
-    public void MontaString(ProdutoModel prod) throws IOException {
+    public void MontaString(ProdutoModel prod, String acao) throws IOException {
 
         ProdutoModel produto = new ProdutoModel();
         Crud crud = new Crud();
@@ -30,8 +30,9 @@ public class ProdutoDAO extends PadraoDAO<ProdutoModel>{
         Registro += "|" + produto.getPreco();
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt");
-        crud.Imprimir("Insert", Registro);
+        crud.Imprimir(acao, Registro);
     }
+
     public boolean MontaStringUpdate(ProdutoModel prod, String Id) throws IOException {
         Crud crud = new Crud();
         String Registro = "";

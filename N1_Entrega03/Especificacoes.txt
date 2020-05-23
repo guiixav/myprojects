@@ -7,12 +7,13 @@ RA: 082170030
 IDE usado: Intellij 2019.3.3
 
 OBS:
- - Deixar a pasta myprojects no diretório C:/
- - Na Tela de Login, usar schema:
-	Funcionario:
-		user: adminFunc
-		pass: adminFunc
+    - Implementação de Threads nos métodos EstadoConsoleRegistra, de Cliente, Funcionario, Pedido e Produto
+    - Deixar a pasta myprojects no diretório C:/
+    - Na Tela de Login, usar schema:
+	    Funcionario:
+		    user: adminFunc
+            pass: adminFunc
 		
-	Gerente:
-		user: adminMng
-		pass: adminMng
+        Gerente:
+            user: adminMng
+            pass: adminMng

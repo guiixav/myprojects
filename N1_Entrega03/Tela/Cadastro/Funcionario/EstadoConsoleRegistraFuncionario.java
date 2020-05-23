@@ -69,8 +69,7 @@ public class EstadoConsoleRegistraFuncionario extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                //crud.Imprimir("Insert", String.format("%s, no arquivo Funcionarios.txt", funcionario.getId()));
-                func.MontaString(funcionario, Tipo);
+                func.MontaString(funcionario, Tipo, "Insert");
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
                 break;
             case 2:

@@ -32,8 +32,7 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         int opcao = scan.nextInt();
         switch(opcao) {
             case 1:
-                crud.Imprimir("Insert", String.format("%s, no arquivo Clientes.txt", cliente.getId()));
-                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                clt.MontaString(cliente, "Insert");
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();

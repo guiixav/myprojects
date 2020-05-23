@@ -59,8 +59,6 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
 
         pedido.setValorTotal(Valortotal);
 
-        pedidoDAO.MontaString(pedido);
-
         System.out.println("Deseja imprimir o novo pedido?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
@@ -68,7 +66,7 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
 
         switch (opcao2) {
             case 1:
-                //Metodo de impressao
+                pedidoDAO.MontaString(pedido, "Insert");
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();

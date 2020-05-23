@@ -1,7 +1,6 @@
 package DAO;
 
 import Crud.Crud;
-import Models.ClienteModel;
 import Models.PedidoModel;
 
 import java.io.IOException;
@@ -25,7 +24,7 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
         Tabela = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt";
     }
 
-    public void MontaString(PedidoModel pedido) throws IOException {
+    public void MontaString(PedidoModel pedido, String acao) throws IOException {
         Crud crud = new Crud();
         String Registro = "";
 
@@ -35,6 +34,6 @@ public class PedidoDAO extends PadraoDAO<PedidoModel>{
         Registro += "|" + pedido.getValorTotal();
 
         crud.Insert(Registro, "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt");
-        crud.Imprimir("Insert", Registro);
+        crud.Imprimir(acao, Registro);
     }
 }
