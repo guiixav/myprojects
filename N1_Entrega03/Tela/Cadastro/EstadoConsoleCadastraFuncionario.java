@@ -14,6 +14,7 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
         Boolean sair = false;
         //FuncionarioModel funcionario = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
+        do{
         System.out.println("**** CADASTRO DE FUNCIONARIO ****");
         System.out.println("Escolha a opção desejada:");
         System.out.println("1 - Cadastrar novo Funcionario");
@@ -23,14 +24,17 @@ public class EstadoConsoleCadastraFuncionario extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_FUNCIONARIO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.ATUALIZA_FUNCIONARIO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 3:
                 EnumEstadoConsole.DELETA_FUNCIONARIO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }}while(sair==false);
         /*String Registro = String.valueOf(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Funcionarios.txt"));
         System.out.println("Digite o nome do Gerente:");
         Registro += scan.nextLine();

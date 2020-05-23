@@ -15,6 +15,7 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         ClienteModel cliente = new ClienteModel();
         Scanner scan = new Scanner(System.in);
         ClienteDAO clt = new ClienteDAO();
+        boolean sair = false;
 
         System.out.println("------REGISTRO DE NOVOS CLIENTES-------");
         System.out.println("Digite o nome do Cliente:");
@@ -24,7 +25,7 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         cliente.setCPF(scan.nextLine());
 
         cliente.setId(crud.ProxId("C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt"));
-
+do{
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
@@ -33,11 +34,14 @@ public class EstadoConsoleRegistraCliente extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 clt.MontaString(cliente, "Insert");
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }} while (sair == false);
         return true;
     }
 }

@@ -22,6 +22,7 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         String ArquivoPedidos = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Pedidos.txt";
         String ArquivoProdutos = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Produtos.txt";
         String ArquivoClientes = "C:\\myprojects\\N1_Entrega03\\Arquivos\\Clientes.txt";
+        boolean sair = false;
 
         String produto = "";
         String Registro = String.valueOf(crud.ProxId(ArquivoPedidos));
@@ -58,7 +59,7 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         double Valortotal = prod.getPreco() * qtd;
 
         pedido.setValorTotal(Valortotal);
-
+do{
         System.out.println("Deseja imprimir o novo pedido?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
@@ -67,11 +68,14 @@ public class EstadoConsoleRegistraPedido extends MaquinaEstadoConsole {
         switch (opcao2) {
             case 1:
                 pedidoDAO.MontaString(pedido, "Insert");
+                EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair =true;
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair =true;
                 break;
-        }
+        }}while(sair==false);
         return true;
     }
 }

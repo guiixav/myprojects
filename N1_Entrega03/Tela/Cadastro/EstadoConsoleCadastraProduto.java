@@ -15,6 +15,7 @@ public class EstadoConsoleCadastraProduto extends MaquinaEstadoConsole {
         Boolean sair = false;
         //FuncionarioModel funcionario = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
+        do{
         System.out.println("**** CADASTRO DE PRODUTO ****");
         System.out.println("Escolha a opção desejada:");
         System.out.println("1 - Cadastrar novo Produto");
@@ -25,17 +26,21 @@ public class EstadoConsoleCadastraProduto extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_PRODUTO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.ATUALIZA_PRODUTO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 3:
                 EnumEstadoConsole.DELETA_PRODUTO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 4:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }}while(sair ==false);
         return true;
 
     }

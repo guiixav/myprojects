@@ -15,6 +15,7 @@ public class EstadoConsoleCadastraPedido extends MaquinaEstadoConsole {
         Boolean sair = false;
         //FuncionarioModel funcionario = new FuncionarioModel();
         Scanner scan = new Scanner(System.in);
+        do{
         System.out.println("**** CADASTRO DE PEDIDO ****");
         System.out.println("Escolha a opção desejada:");
         System.out.println("1 - Cadastrar novo Pedido");
@@ -23,11 +24,13 @@ public class EstadoConsoleCadastraPedido extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 EnumEstadoConsole.REGISTRA_PEDIDO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }}while(sair ==false);
         return true;
 
     }

@@ -9,3 +9,9 @@
 14|ghj|ghj|159.0|ghj|ghj
 15|rty|rty|159.0|rty|rty
 16|yhj|yhj|153.0|yhj|yhj
+17|ikl|ikl|12.0|ujk|ujk
+18|asdasdsa|12321313|1.23213213E8|testegui|gui
+19|asdsadsadsa|12321312321|1.231232131E9|testegui|gui
+20|asdasdsadas|asdasdsadsad|1.23123213213E11|gui|gui
+21|gui|123123213|123.0|gui|gui
+22|asdsadsad|123213213|1.23213213E8|testegui|gui

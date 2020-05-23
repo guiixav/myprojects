@@ -17,13 +17,14 @@ public class EstadoConsoleRegistraProduto extends MaquinaEstadoConsole {
         ProdutoModel produto = new ProdutoModel();
         Scanner scan = new Scanner(System.in);
         ProdutoDAO prdDAO = new ProdutoDAO();
+        boolean sair = false;
 
         System.out.println("------REGISTRO DE NOVOS PRODUTOS-------");
         System.out.println("Digite a descrição do produto:");
         produto.setDescricao(scan.nextLine());
         System.out.println("Digite o preço do produto:");
         produto.setPreco(Double.parseDouble(scan.nextLine()));
-
+do{
         System.out.println("Deseja imprimir novo registro?");
         System.out.println("1 - Imprimir");
         System.out.println("2 - Finalizar");
@@ -32,11 +33,13 @@ public class EstadoConsoleRegistraProduto extends MaquinaEstadoConsole {
         switch(opcao) {
             case 1:
                 prdDAO.MontaString(produto, "Insert");
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.MENU_CADASTRO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }}while(sair == false);
         return true;
     }
 }

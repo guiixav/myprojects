@@ -19,14 +19,15 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
         boolean sair = false;
 
         List<Integer> cases = Arrays.asList(0, 1, 2, 3, 4);
-
+        Scanner scan = new Scanner(System.in);
+        do{
         System.out.println("Escolha uma das opções abaixo para cadastro:");
         System.out.println("1 - Cadastro de funcionário");
         System.out.println("2 - Cadastro de Cliente");
         System.out.println("3 - Cadastro de pedidos");
         System.out.println("4 - Cadastro de produto");
         System.out.println("0 - Sair");
-        Scanner scan = new Scanner(System.in);
+
 
         int opcao = scan.nextInt();
         switch(opcao)
@@ -38,20 +39,25 @@ public class EstadoConsoleOpcoesCadastro extends MaquinaEstadoConsole {
                 else{
                     System.out.println("Perfil logado não é de Gerente");
                 }
+                sair = true;
                 break;
             case 2:
                 EnumEstadoConsole.CADASTRO_CLIENTE.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 3:
                 EnumEstadoConsole.CADASTRO_PEDIDO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 4:
                 EnumEstadoConsole.CADASTRO_PRODUTO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
             case 0:
                 EnumEstadoConsole.BEM_VINDO.getEstadoMaquina().Executa();
+                sair = true;
                 break;
-        }
+        }}while(sair == false);
         return true;
     }
 }

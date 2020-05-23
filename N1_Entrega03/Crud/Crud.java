@@ -103,7 +103,7 @@ public class Crud extends Metodos{
 
     //Procura User
     public String ProcuraUser(String User){
-        try(BufferedReader br = new BufferedReader(new FileReader("C:\\myprojects\\N1_Entrega03\\Arquivos\\Usuarios.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("D:\\Arquivos faculdade\\EC6\\LPII\\Threads\\myprojects\\N1_Entrega03\\Arquivos\\Usuarios.txt"))){
             String linha;
             while(((linha = br.readLine()) != null)){
                 String linhaUsuario = linha.split("\\|")[1];
